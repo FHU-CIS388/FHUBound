@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="FHUBound.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Application.Resources>
+
+        <!--  Colors  -->
+        <Color x:Key="FHUMaroon">#661424</Color>
+        <Color x:Key="Primary">#661424</Color>
+        <Color x:Key="Black">#231F20</Color>
+        <Color x:Key="DarkGray">#383435</Color>
+        <Color x:Key="Gray">#808080</Color>
+        <Color x:Key="LightGray">#B2B2B2</Color>
+        <Color x:Key="LightWhite">#F1F1F1</Color>
+        <Color x:Key="White">#FFFFFF</Color>
+
+        <Color x:Key="Maroon">#591124</Color>
+        <Color x:Key="Blue">#3F5F73</Color>
+        <Color x:Key="Green">#657346</Color>
+        <Color x:Key="Yellow">#A6882E</Color>
+        <Color x:Key="Orange">#8C4A23</Color>
+
+        <Color x:Key="DarkBlue">#152026</Color>
+
+        <!--  Fonts  -->
+        <OnPlatform x:Key="BlackFont" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NunitoSans-Black.ttf#NunitoSans" />
+            <On Platform="iOS" Value="NunitoSans-Black" />
+        </OnPlatform>
+        <OnPlatform x:Key="BoldFont" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NunitoSans-Bold.ttf#NunitoSans" />
+            <On Platform="iOS" Value="NunitoSans-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="NormalFont" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NunitoSans-Regular.ttf#NunitoSans" />
+            <On Platform="iOS" Value="NunitoSans-Regular" />
+        </OnPlatform>
+        <OnPlatform x:Key="LightFont" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NunitoSans-Light.ttf#NunitoSans" />
+            <On Platform="iOS" Value="NunitoSans-Light" />
+        </OnPlatform>
+        <OnPlatform x:Key="ItalicFont" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NunitoSans-Italic.ttf#NunitoSans" />
+            <On Platform="iOS" Value="NunitoSans-Italic" />
+        </OnPlatform>
+
+
+        <!--  https://type-scale.com/  -->
+        <!--  Type Scale: 1.250 Major Third  -->
+        <!--  49, 39, 31, 25, 20, 49, 13, 10, 8  -->
+
+        <Style x:Key="ExtraLargeText" TargetType="Label">
+            <Setter Property="FontSize" Value="39" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
+        </Style>
+        <Style x:Key="LargeText" TargetType="Label">
+            <Setter Property="FontSize" Value="31" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+        </Style>
+        <Style x:Key="MediumLargeText" TargetType="Label">
+            <!--<Setter Property="FontAttributes" Value="Bold" />-->
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        </Style>
+
+        <Style x:Key="MediumText" TargetType="Label">
+            <!--<Setter Property="FontAttributes" Value="Bold" />-->
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+        </Style>
+
+        <Style x:Key="MediumBoldText" TargetType="Label">
+            <!--<Setter Property="FontAttributes" Value="Bold" />-->
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        </Style>
+
+        <Style x:Key="BodyText" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+
+        </Style>
+        <Style x:Key="SmallText" TargetType="Label">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+        </Style>
+
+        <Style x:Key="HeaderSubtitle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            <Setter Property="Opacity" Value="0.54" />
+            <Setter Property="TextColor" Value="{StaticResource Black}" />
+        </Style>
+
+        <Style x:Key="HeaderTitle" TargetType="Label">
+            <Setter Property="FontSize" Value="31" />
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="TextColor" Value="{StaticResource Black}" />
+        </Style>
+
+        <Style x:Key="MediumBoldButtonText" TargetType="Button">
+            <!--<Setter Property="FontAttributes" Value="Bold" />-->
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        </Style>
+
+
+    </Application.Resources>
+</Application>
