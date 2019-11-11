@@ -18,13 +18,12 @@
         <Color x:Key="LightWhite">#F1F1F1</Color>
         <Color x:Key="White">#FFFFFF</Color>
 
-        <Color x:Key="Maroon">#591124</Color>
-        <Color x:Key="Blue">#3F5F73</Color>
-        <Color x:Key="Green">#657346</Color>
-        <Color x:Key="Yellow">#A6882E</Color>
-        <Color x:Key="Orange">#8C4A23</Color>
+        <Color x:Key="Maroon">#73162F</Color>
+        <Color x:Key="Blue">#4D748C</Color>
+        <Color x:Key="Green">#7B8C56</Color>
+        <Color x:Key="Yellow">#BF9D36</Color>
+        <Color x:Key="Orange">#A65729</Color>
 
-        <Color x:Key="DarkBlue">#152026</Color>
 
         <!--  Fonts  -->
         <OnPlatform x:Key="BlackFont" x:TypeArguments="x:String">
@@ -55,12 +54,12 @@
 
         <Style x:Key="ExtraLargeText" TargetType="Label">
             <Setter Property="FontSize" Value="39" />
-            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="Opacity" Value="0.94" />
             <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
         </Style>
         <Style x:Key="LargeText" TargetType="Label">
             <Setter Property="FontSize" Value="31" />
-            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="Opacity" Value="0.94" />
             <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
         </Style>
         <Style x:Key="MediumLargeText" TargetType="Label">

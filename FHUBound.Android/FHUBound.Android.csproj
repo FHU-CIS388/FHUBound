@@ -71,7 +71,6 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Resources\cs1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.xml" />
@@ -90,9 +89,10 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
-    <AndroidResource Include="Resources\drawable\tab_about.png" />
-    <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable\cs1.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\dorms_1.JPG">
       <SubType></SubType>
       <Generator></Generator>
@@ -113,155 +113,111 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-account-100-semi-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_account_100_semi_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-account-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_account_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-account-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_account_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-account-filled%402x.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_100_dotted.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-100-dotted.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_bubble_100_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-bubble-100-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_bubble_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-bubble-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_room_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-filled%402x.png">
+    <AndroidResource Include="Resources\drawable\icons8_chat_room_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-filled%403x.png">
+    <AndroidResource Include="Resources\drawable\icons8_female_user_100_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-room-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_female_user_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-room-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_home_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-room-filled%402x.png">
+    <AndroidResource Include="Resources\drawable\icons8_home_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-chat-room-filled%403x.png">
+    <AndroidResource Include="Resources\drawable\icons8_male_user_100_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-female-user-100-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_male_user_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-female-user-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_online_store_100_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-home-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_online_store_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-home-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_person_90.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-home-filled%402x.png">
+    <AndroidResource Include="Resources\drawable\icons8_person_96.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-home-filled%403x.png">
+    <AndroidResource Include="Resources\drawable\icons8_shop_96.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-male-user-100-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_t_shirt_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-male-user-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_t_shirt_160.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-online-store-100-filled.png">
+    <AndroidResource Include="Resources\drawable\icons8_t_shirt_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-online-store-100.png">
+    <AndroidResource Include="Resources\drawable\icons8_user_male_100_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-person-90.png">
+    <AndroidResource Include="Resources\drawable\icons8_user_male_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-person-96.png">
+    <AndroidResource Include="Resources\drawable\icons8_visit_100.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-shop-96.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-t-shirt-100.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-t-shirt-160.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-t-shirt-filled.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-t-shirt-filled%402x.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-t-shirt-filled%403x.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-user-male-100-filled.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-user-male-100.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-visit-100.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-visit-filled.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-visit-filled%402x.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icons8-visit-filled%403x.png">
+    <AndroidResource Include="Resources\drawable\icons8_visit_filled.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -281,6 +237,50 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\tab_about.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\tab_feed.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\xamarin_logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_account_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_chat_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_chat_room_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_home_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_t_shirt_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icons8_visit_filled.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\RiseUpWhite.jpeg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Rush.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FHUBound\FHUBound.csproj">
@@ -297,6 +297,10 @@
     <AndroidAsset Include="Assets\NunitoSans-Light.ttf" />
     <AndroidAsset Include="Assets\NunitoSans-Regular.ttf" />
     <AndroidAsset Include="Assets\NunitoSans-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-hdpi\" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

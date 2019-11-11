@@ -109,47 +109,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <BundleResource Include="Resources\tab_about.png" />
-    <BundleResource Include="Resources\tab_about%402x.png" />
-    <BundleResource Include="Resources\tab_about%403x.png" />
-    <BundleResource Include="Resources\tab_feed.png" />
-    <BundleResource Include="Resources\tab_feed%402x.png" />
-    <BundleResource Include="Resources\tab_feed%403x.png" />
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\icons8-account-filled.png" />
-    <BundleResource Include="Resources\icons8-account-filled%402x.png" />
-    <BundleResource Include="Resources\icons8-home-filled.png" />
-    <BundleResource Include="Resources\icons8-home-filled%402x.png" />
-    <BundleResource Include="Resources\icons8-home-filled%403x.png" />
-    <BundleResource Include="Resources\icons8-chat-filled.png" />
-    <BundleResource Include="Resources\icons8-chat-filled%402x.png" />
-    <BundleResource Include="Resources\icons8-chat-filled%403x.png" />
-    <BundleResource Include="Resources\icons8-visit-filled.png" />
-    <BundleResource Include="Resources\icons8-visit-filled%402x.png" />
-    <BundleResource Include="Resources\icons8-visit-filled%403x.png" />
-    <BundleResource Include="Resources\icons8-t-shirt-filled.png" />
-    <BundleResource Include="Resources\icons8-t-shirt-filled%402x.png" />
-    <BundleResource Include="Resources\icons8-t-shirt-filled%403x.png" />
-    <BundleResource Include="Resources\study_abroad_1.png" />
-    <BundleResource Include="Resources\study_abroad_2.png" />
-    <BundleResource Include="Resources\study_abroad_3.png" />
-    <BundleResource Include="Resources\study_abroad_4.png" />
-    <BundleResource Include="Resources\study_abroad_5.png" />
-    <BundleResource Include="Resources\Rush.png" />
-    <BundleResource Include="Resources\RiseUpWhite.jpeg" />
-    <BundleResource Include="Resources\MSYC.jpg" />
-    <BundleResource Include="Resources\maroonandgold.jpg" />
-    <BundleResource Include="Resources\fhu_square.jpg" />
-    <BundleResource Include="Resources\cs1.jpg" />
-    <BundleResource Include="Resources\dorms_1.JPG" />
-    <BundleResource Include="Resources\dorms_2.JPG" />
-    <BundleResource Include="Resources\dorms_3.JPG" />
-    <BundleResource Include="Resources\istockpuzzle.jpg" />
-    <BundleResource Include="Resources\fhulogomaroon_400.png" />
-    <BundleResource Include="Resources\mat.jpg" />
     <BundleResource Include="Resources\NunitoSans-Black.ttf" />
     <BundleResource Include="Resources\NunitoSans-Bold.ttf" />
     <BundleResource Include="Resources\NunitoSans-ExtraBold.ttf" />
@@ -158,6 +120,67 @@
     <BundleResource Include="Resources\NunitoSans-Light.ttf" />
     <BundleResource Include="Resources\NunitoSans-Regular.ttf" />
     <BundleResource Include="Resources\NunitoSans-SemiBold.ttf" />
+    <BundleResource Include="Resources\cs1.jpg" />
+    <BundleResource Include="Resources\Default_568h%402x.png" />
+    <BundleResource Include="Resources\Default_Portrait.png" />
+    <BundleResource Include="Resources\Default_Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\dorms_1.JPG" />
+    <BundleResource Include="Resources\dorms_2.JPG" />
+    <BundleResource Include="Resources\dorms_3.JPG" />
+    <BundleResource Include="Resources\fhu_square.jpg" />
+    <BundleResource Include="Resources\fhulogomaroon_400.png" />
+    <BundleResource Include="Resources\icons8_account_100_semi_filled.png" />
+    <BundleResource Include="Resources\icons8_account_100.png" />
+    <BundleResource Include="Resources\icons8_account_filled.png" />
+    <BundleResource Include="Resources\icons8_account_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_chat_100_dotted.png" />
+    <BundleResource Include="Resources\icons8_chat_bubble_100_filled.png" />
+    <BundleResource Include="Resources\icons8_chat_bubble_100.png" />
+    <BundleResource Include="Resources\icons8_chat_filled.png" />
+    <BundleResource Include="Resources\icons8_chat_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_chat_filled%403x.png" />
+    <BundleResource Include="Resources\icons8_chat_room_100.png" />
+    <BundleResource Include="Resources\icons8_chat_room_filled.png" />
+    <BundleResource Include="Resources\icons8_chat_room_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_chat_room_filled%403x.png" />
+    <BundleResource Include="Resources\icons8_female_user_100_filled.png" />
+    <BundleResource Include="Resources\icons8_female_user_100.png" />
+    <BundleResource Include="Resources\icons8_home_100.png" />
+    <BundleResource Include="Resources\icons8_home_filled.png" />
+    <BundleResource Include="Resources\icons8_home_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_home_filled%403x.png" />
+    <BundleResource Include="Resources\icons8_male_user_100_filled.png" />
+    <BundleResource Include="Resources\icons8_male_user_100.png" />
+    <BundleResource Include="Resources\icons8_online_store_100_filled.png" />
+    <BundleResource Include="Resources\icons8_online_store_100.png" />
+    <BundleResource Include="Resources\icons8_person_90.png" />
+    <BundleResource Include="Resources\icons8_person_96.png" />
+    <BundleResource Include="Resources\icons8_shop_96.png" />
+    <BundleResource Include="Resources\icons8_t_shirt_100.png" />
+    <BundleResource Include="Resources\icons8_t_shirt_160.png" />
+    <BundleResource Include="Resources\icons8_t_shirt_filled.png" />
+    <BundleResource Include="Resources\icons8_t_shirt_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_t_shirt_filled%403x.png" />
+    <BundleResource Include="Resources\icons8_user_male_100_filled.png" />
+    <BundleResource Include="Resources\icons8_user_male_100.png" />
+    <BundleResource Include="Resources\icons8_visit_100.png" />
+    <BundleResource Include="Resources\icons8_visit_filled.png" />
+    <BundleResource Include="Resources\icons8_visit_filled%402x.png" />
+    <BundleResource Include="Resources\icons8_visit_filled%403x.png" />
+    <BundleResource Include="Resources\istockpuzzle.jpg" />
+    <BundleResource Include="Resources\maroonandgold.jpg" />
+    <BundleResource Include="Resources\mat.jpg" />
+    <BundleResource Include="Resources\MSYC.jpg" />
+    <BundleResource Include="Resources\RiseUpWhite.jpeg" />
+    <BundleResource Include="Resources\Rush.png" />
+    <BundleResource Include="Resources\study_abroad_1.png" />
+    <BundleResource Include="Resources\study_abroad_2.png" />
+    <BundleResource Include="Resources\study_abroad_3.png" />
+    <BundleResource Include="Resources\study_abroad_4.png" />
+    <BundleResource Include="Resources\study_abroad_5.png" />
+    <BundleResource Include="Resources\icons8_account_filled%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -183,5 +206,8 @@
       <Project>{831F0479-6E79-4CFF-9A7C-C8426C0E3F53}</Project>
       <Name>FHUBound</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
 </Project>

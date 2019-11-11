@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:local="clr-namespace:FHUBound.Views"
+    xmlns:views="clr-namespace:FHUBound.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Home"
     NavBarIsVisible="False"
@@ -31,24 +31,24 @@
     </Shell.Resources>
     <!--  Your Pages  -->
     <TabBar>
-        <Tab Title="Home" Icon="icons8-home-filled.png">
-            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+        <Tab Title="Home" Icon="icons8_home_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
 
-        <Tab Title="Store" Icon="icons8-t-shirt-filled.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        <Tab Title="Store" Icon="icons8_t_shirt_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:StorePage}" />
         </Tab>
 
-        <Tab Title="Contact" Icon="icons8-chat-filled.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <Tab Title="Contact" Icon="icons8_chat_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ContactPage}" />
         </Tab>
 
-        <Tab Title="Visit" Icon="icons8-visit-filled.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <Tab Title="Visit" Icon="icons8_visit_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:VisitPage}" />
         </Tab>
 
-        <Tab Title="Profile" Icon="icons8-account-filled.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <Tab Title="Profile" Icon="icons8_account_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>
     </TabBar>
     <!-- Optional Templates
