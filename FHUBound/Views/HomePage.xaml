@@ -71,7 +71,7 @@
             <CollectionView
                 x:Name="CardsCollectionView"
                 Grid.Row="0"
-                Margin="0,0,0,80"
+                Margin="{OnPlatform Android='0', iOS='0,0,0,80'}"
                 >
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
@@ -87,18 +87,23 @@
                     </x:Array>
                 </d:CollectionView.ItemsSource>
 
+                <!-- Spacer for page header-->
                 <CollectionView.Header>
-                    <!-- Spacer for page header-->
                     <StackLayout Padding="0,160,0,0" />
                 </CollectionView.Header>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-
-                        <Grid Padding="16">
+                        
+                        <Grid Padding="16"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand">
                             <pancake:PancakeView
                                 Padding="0"
+                                BackgroundGradientStartColor="{StaticResource LightWhite}"
+                                BackgroundGradientEndColor="{StaticResource Yellow}"
                                 BackgroundColor="{StaticResource LightWhite}"
+                                BackgroundGradientAngle="15"
                                 CornerRadius="16"
                                 HasShadow="True"
                                 IsClippedToBounds="False"
@@ -191,22 +196,34 @@
                                         HighlightForegroundColor="{StaticResource FHUMaroon}"
                                         IsVisible="{Binding ButtonText, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                         Text="{Binding ButtonText}"
-                                        HorizontalOptions="Center" />
+                                        HorizontalOptions="Center" /> 
 
                                     <!--  Card Footer  -->
+                                    <!--BackgroundColor="{StaticResource Yellow}"
+                                    HighlightBorderColor="{StaticResource LightWhite}"
+                                    BorderThickness="1"
+                                    -->
                                     <StackLayout
                                         Grid.Row="3"
                                         Margin="-20,0,-40,-20"
                                         Padding="16,0,16,20"
-                                        BackgroundColor="{StaticResource Yellow}"
-                                        HorizontalOptions="FillAndExpand">
+                                        >
 
                                         <flex:FlexButton
                                             Margin="0,10,0,10"
                                             Padding="0,0,0,0"
                                             HeightRequest="50"
+                                            WidthRequest="300"
+                                            
                                             FontFamily="{StaticResource BlackFont}"
+                                            BackgroundColor="Transparent"
                                             ForegroundColor="{StaticResource LightWhite}"
+                                            
+                                            HighlightBackgroundColor="Transparent" 
+                                            HighlightForegroundColor="{StaticResource Maroon}"
+                                            
+                                            
+
                                             Text="{Binding Value, StringFormat='Collect {0:0} 🦁'}"
                                             />
                                     </StackLayout>

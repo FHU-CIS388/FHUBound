@@ -181,6 +181,7 @@
     <BundleResource Include="Resources\study_abroad_4.png" />
     <BundleResource Include="Resources\study_abroad_5.png" />
     <BundleResource Include="Resources\icons8_account_filled%403x.png" />
+    <BundleResource Include="Resources\fhu_color_belltower.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

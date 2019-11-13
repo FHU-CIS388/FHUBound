@@ -18,11 +18,11 @@
         <Color x:Key="LightWhite">#F1F1F1</Color>
         <Color x:Key="White">#FFFFFF</Color>
 
-        <Color x:Key="Maroon">#73162F</Color>
-        <Color x:Key="Blue">#4D748C</Color>
-        <Color x:Key="Green">#7B8C56</Color>
-        <Color x:Key="Yellow">#BF9D36</Color>
-        <Color x:Key="Orange">#A65729</Color>
+        <Color x:Key="Maroon">#8C1B39</Color>
+        <Color x:Key="Blue">#5B89A6</Color>
+        <Color x:Key="Green">#91A665</Color>
+        <Color x:Key="Yellow">#D9B23D</Color>
+        <Color x:Key="Orange">#BF6430</Color>
 
 
         <!--  Fonts  -->
