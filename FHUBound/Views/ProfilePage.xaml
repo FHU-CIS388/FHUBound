@@ -1,5 +1,68 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.ProfilePage">
     <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <BoxView
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    WidthRequest="300"
+                    HeightRequest="300"
+                    Color="#8d8d8d"
+                    ></BoxView>
+                
+                <Image 
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Source="second.jpg" 
+                    HorizontalOptions="Center"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                 >
+                   
+                    
+                    
+                </Image>
+
+                <Label
+                    Text="Jack Cannon"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
+                    FontSize="40"
+          
+                    >
+                    
+                    
+                </Label>
+
+                <Label
+                    Text="Lion points"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    FontSize="Body"
+                    ></Label>
+
+                <Label
+                    Text="next level"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    FontSize="Body"
+                    ></Label>
+
+
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
