@@ -1,5 +1,100 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.ProfilePage">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="FHUBound.Views.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
+
+        <ScrollView>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <!--  Header  -->
+                <Image
+                    Grid.Row="0"
+                    Aspect="Fill"
+                    Source="header.jpg" />
+
+                <!--  Profile Image  -->
+                <StackLayout Grid.Row="1" TranslationY="-100">
+
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="200"
+                        HorizontalOptions="Center"
+                        Source="dshannon.jpg"
+                        WidthRequest="150" />
+
+                    <Label
+                        FontSize="Body"
+                        HorizontalTextAlignment="Center"
+                        Text="David Shannon" />
+
+                    <!--  Bio  -->
+                    <Label
+                        Grid.Row="3"
+                        Margin="10,20,20,0"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="This is a bio about me. I'm pretty cool. I like bacon. And turtles."
+                        TextColor="Gray" />
+
+                </StackLayout>
+
+
+                <!--  Stats  -->
+
+                <Grid Grid.Row="2" Margin="0,-70,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="0" Orientation="Vertical">
+                        <Label
+                            FontSize="Title"
+                            HorizontalTextAlignment="Center"
+                            Text="325" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalTextAlignment="Center"
+                            Text="BoundBucks" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1" Orientation="Vertical">
+                        <Label
+                            FontSize="Title"
+                            HorizontalTextAlignment="Center"
+                            Text="4" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalTextAlignment="Center"
+                            Text="Daily Challenges" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="2" Orientation="Vertical">
+                        <Label
+                            FontSize="Title"
+                            HorizontalTextAlignment="Center"
+                            Text="23" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalTextAlignment="Center"
+                            Text="Badges" />
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
