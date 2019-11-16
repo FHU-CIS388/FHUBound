@@ -5749,6 +5749,7 @@ namespace FHUBound.Droid
 			public const int fhulogomaroon_400 = 2131165288;
 			
 			// aapt resource value: 0x7F070066
+			public const int fhu_color_belltower = 2131165286;
 			
 			// aapt resource value: 0x7F070067
 			public const int fhu_square = 2131165287;
