@@ -39,14 +39,6 @@
             <ShellContent ContentTemplate="{DataTemplate views:StorePage}" />
         </Tab>
 
-        <Tab Title="Contact" Icon="icons8_chat_filled.png">
-            <ShellContent ContentTemplate="{DataTemplate views:ContactPage}" />
-        </Tab>
-
-        <Tab Title="Visit" Icon="icons8_visit_filled.png">
-            <ShellContent ContentTemplate="{DataTemplate views:VisitPage}" />
-        </Tab>
-
         <Tab Title="Profile" Icon="icons8_account_filled.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>
