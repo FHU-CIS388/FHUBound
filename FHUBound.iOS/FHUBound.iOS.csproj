@@ -211,4 +211,37 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bound_t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blanket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fhu_hoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fhu_t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lions_hoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lions_t.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone_pocket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stickers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ds.jpeg" />
+  </ItemGroup>
 </Project>

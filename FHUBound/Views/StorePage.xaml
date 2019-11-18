@@ -6,16 +6,18 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
     xmlns:local="clr-namespace:FHUBound"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    Title="Store">
+    Title="Store"
+    BackgroundColor="{StaticResource LightWhite}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid BackgroundColor="{StaticResource Blue}">
+        <Grid>
             <Grid Grid.Row="0" Padding="16,60,16,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -32,21 +34,20 @@
                     Padding="0"
                     LineBreakMode="WordWrap"
                     Style="{StaticResource LargeText}"
-                    Text="Rewards Store"
-                    TextColor="{StaticResource LightWhite}" />
+                    Text="FHUBound Shop" />
 
                 <flex:FlexButton
                     Grid.Row="0"
                     Grid.Column="1"
                     Margin="0"
                     Padding="8"
-                    BackgroundColor="{StaticResource LightWhite}"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
                     CornerRadius="16"
                     FontFamily="{StaticResource BoldFont}"
                     FontSize="25"
-                    ForegroundColor="{StaticResource DarkGray}"
-                    HasShadow="True"
+                    ForegroundColor="{StaticResource LightWhite}"
                     HeightRequest="48"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
@@ -56,10 +57,12 @@
             </Grid>
 
             <!--  CollectionView of Cards  -->
+
             <CollectionView
-                x:Name="CardsCollectionView"
+                x:Name="ShopCollectionView"
                 Grid.Row="0"
-                Margin="0,0,0,80">
+                Margin="{OnPlatform Android='0',
+                                    iOS='0,0,0,80'}">
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
                         <models:Card
@@ -74,18 +77,24 @@
                     </x:Array>
                 </d:CollectionView.ItemsSource>
 
+                <!--  Spacer for page header  -->
                 <CollectionView.Header>
-                    <!--  Spacer for page header  -->
                     <StackLayout Padding="0,160,0,0" />
                 </CollectionView.Header>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
 
-                        <Grid Padding="16">
+                        <Grid
+                            Padding="16"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
                             <pancake:PancakeView
                                 Padding="0"
                                 BackgroundColor="{StaticResource LightWhite}"
+                                BackgroundGradientAngle="15"
+                                BackgroundGradientEndColor="{StaticResource Maroon}"
+                                BackgroundGradientStartColor="{StaticResource Blue}"
                                 CornerRadius="16"
                                 HasShadow="True"
                                 HorizontalOptions="FillAndExpand"
@@ -107,16 +116,10 @@
                                         <Label
                                             Margin="0"
                                             HorizontalOptions="FillAndExpand"
-                                            IsVisible="{Binding HeaderSubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
-                                            LineBreakMode="NoWrap"
-                                            Style="{StaticResource HeaderSubtitle}"
-                                            Text="" />
-                                        <Label
-                                            Margin="0"
-                                            HorizontalOptions="FillAndExpand"
-                                            IsVisible="{Binding HeaderTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                            HorizontalTextAlignment="Center"
                                             Style="{StaticResource HeaderTitle}"
-                                            Text="FHUBound Hoodie" />
+                                            Text="{Binding HeaderTitle}"
+                                            TextColor="{StaticResource LightWhite}" />
                                     </StackLayout>
 
                                     <!--  Card Body  -->
@@ -126,54 +129,43 @@
                                                 Margin="0"
                                                 Aspect="AspectFill"
                                                 HorizontalOptions="FillAndExpand"
-                                                IsVisible="{Binding ImageUrl, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                 Source="{Binding ImageUrl}"
                                                 VerticalOptions="FillAndExpand" />
 
                                             <StackLayout Padding="16,8" Spacing="4">
                                                 <Label
                                                     HorizontalTextAlignment="Center"
-                                                    IsVisible="{Binding BodyTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource LargeText}"
-                                                    Text="Hi3"
-                                                    TextColor="{Binding Black}" />
+                                                    Text="{Binding Value, StringFormat='🦁 {0:0}'}"
+                                                    TextColor="{StaticResource LightWhite}" />
+
 
                                                 <Label
                                                     HorizontalTextAlignment="Center"
-                                                    IsVisible="{Binding BodySubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
-                                                    Style="{StaticResource MediumLargeText}"
-                                                    Text="Hi4"
-                                                    TextColor="{Binding Black}" />
-
-                                                <Label
-                                                    HorizontalTextAlignment="Center"
-                                                    IsVisible="{Binding BodyContent, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource MediumText}"
-                                                    Text="Hi5"
-                                                    TextColor="{Binding Black}" />
+                                                    Text="BoundBucks"
+                                                    TextColor="{StaticResource LightWhite}" />
                                             </StackLayout>
                                         </StackLayout>
                                     </Grid>
 
-
-                                    <!--  Card Button  -->
-                                    <Label Grid.Row="2" />
-
-                                    <!--  Card Footer  -->
                                     <StackLayout
-                                        Grid.Row="3"
+                                        Grid.Row="2"
                                         Margin="-20,0,-40,-20"
-                                        Padding="16,0,16,20"
-                                        BackgroundColor="{StaticResource Maroon}"
-                                        HorizontalOptions="FillAndExpand">
+                                        Padding="16,0,16,20">
 
                                         <flex:FlexButton
                                             Margin="0,10,0,10"
-                                            Padding="0,0,0,0"
+                                            Padding="0,0,20,0"
+                                            BackgroundColor="Transparent"
                                             FontFamily="{StaticResource BlackFont}"
+                                            FontSize="28"
                                             ForegroundColor="{StaticResource LightWhite}"
                                             HeightRequest="50"
-                                            Text="1000 BoundBucks" />
+                                            HighlightBackgroundColor="Transparent"
+                                            HighlightForegroundColor="{StaticResource Maroon}"
+                                            Text="REDEEM NOW"
+                                            WidthRequest="300" />
                                     </StackLayout>
                                 </Grid>
                             </pancake:PancakeView>
