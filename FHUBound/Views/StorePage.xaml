@@ -3,9 +3,128 @@
     x:Class="FHUBound.Views.StorePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
     Title="Store">
     <ContentPage.Content >
+        <ScrollView>
+            <Grid Padding="16,60,16,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}">Freed Hardeman T-Shirt!</Label>
+                    
+                    <flex:FlexButton
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="2"
+                    HeightRequest="48"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
+                    BorderThickness="1"
+
+                    HighlightBackgroundColor="{StaticResource LightWhite}"
+                    HighlightBorderColor="{StaticResource Maroon}"
+                    HighlightForegroundColor="{StaticResource Maroon}"
+
+                    CornerRadius="16"
+                    FontFamily="{StaticResource BoldFont}"
+                    FontSize="25"
+                    ForegroundColor="{StaticResource LightWhite}"
+
+                    Text="25 PTS"
+                    VerticalOptions="Start"
+                    />
+                    
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Image Source="freedshirt.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                </StackLayout>
+                
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="0,50,0,0" >
+                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}">Freed Hardeman Stuffed Lion!</Label>
+
+                    <flex:FlexButton
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="2"
+                    HeightRequest="48"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
+                    BorderThickness="1"
+
+                    HighlightBackgroundColor="{StaticResource LightWhite}"
+                    HighlightBorderColor="{StaticResource Maroon}"
+                    HighlightForegroundColor="{StaticResource Maroon}"
+
+                    CornerRadius="16"
+                    FontFamily="{StaticResource BoldFont}"
+                    FontSize="25"
+                    ForegroundColor="{StaticResource LightWhite}"
+
+                    Text="50 PTS"
+                    VerticalOptions="Start"
+                    />
+
+
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" Padding="0,50,0,0">
+                    <Image Source="fhu_square.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="0"  Padding="0,50,0,0"  >
+                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}">David Shannon's Mustache!</Label>
+
+                    <flex:FlexButton
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="2"
+                    HeightRequest="48"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
+                    BorderThickness="1"
+
+                    HighlightBackgroundColor="{StaticResource LightWhite}"
+                    HighlightBorderColor="{StaticResource Maroon}"
+                    HighlightForegroundColor="{StaticResource Maroon}"
+
+                    CornerRadius="16"
+                    FontFamily="{StaticResource BoldFont}"
+                    FontSize="25"
+                    ForegroundColor="{StaticResource LightWhite}"
+
+                    Text="100 PTS"
+                   
+                    VerticalOptions="Start"
+                    />
+
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="1">
+                    <Image Source="freedshirt.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                </StackLayout>
+
+
+
+
+
+
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 
 </ContentPage>
