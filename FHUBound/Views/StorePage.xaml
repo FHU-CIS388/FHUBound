@@ -36,7 +36,7 @@
                     BackgroundColor="{StaticResource Maroon}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
-
+                    TouchedUp="OnDisplayActionSheetButtonClicked"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
@@ -54,7 +54,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="1">
-                    <Image Source="fhu_square.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                    <Image Source="freedtshirt.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
                 </StackLayout>
                 
 
@@ -70,7 +70,7 @@
                     BackgroundColor="{StaticResource Maroon}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
-
+                    TouchedUp="OnDisplayActionSheetButtonClicked"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
@@ -87,7 +87,7 @@
 
                 </StackLayout>
                 <StackLayout Grid.Row="2" Grid.Column="1" Padding="0,50,0,0">
-                    <Image Source="fhu_square.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                    <Image Source="freedlionstuffed.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
                 </StackLayout>
                 <StackLayout Grid.Row="3" Grid.Column="0"  Padding="0,50,0,0"  >
                     <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}">David Shannon's Mustache!</Label>
@@ -101,7 +101,7 @@
                     BackgroundColor="{StaticResource Maroon}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
-
+                    TouchedUp="OnDisplayActionSheetButtonClicked"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
@@ -119,7 +119,7 @@
 
                 </StackLayout>
                 <StackLayout Grid.Row="3" Grid.Column="1" Padding ="0,50,0,0">
-                    <Image Source="freedshirt.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                    <Image Source="toymustache.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
                 </StackLayout>
 
 
