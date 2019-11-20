@@ -10,6 +10,7 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="FHU Bound"
+    Shell.NavBarIsVisible="False"
     BackgroundColor="{StaticResource White}"
     mc:Ignorable="d">
 

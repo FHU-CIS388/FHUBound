@@ -3,7 +3,8 @@
     x:Class="FHUBound.Views.StorePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Store">
+    Title="Store"
+    Shell.NavBarIsVisible="True">
     <ContentPage.Content >
 
     </ContentPage.Content>
