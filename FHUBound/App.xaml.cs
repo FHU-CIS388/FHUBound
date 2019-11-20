@@ -3,11 +3,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FHUBound.Services;
 using FHUBound.Views;
+using FHUBound.Models;
 
 namespace FHUBound
 {
     public partial class App : Application
     {
+        public static User CurrentUser { get; set; }
 
         public App()
         {
@@ -15,6 +17,8 @@ namespace FHUBound
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+
+            CurrentUser = new User() { Username = "Person", CurrentPoints = 1000, Email = "kcasey@fhu.edu" };
         }
 
         protected override void OnStart()

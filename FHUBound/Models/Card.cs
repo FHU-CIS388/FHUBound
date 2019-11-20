@@ -30,6 +30,5 @@ namespace FHUBound.Models
         public Card()
         {
         }
-
     }
 }
