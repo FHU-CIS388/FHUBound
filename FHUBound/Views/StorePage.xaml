@@ -3,9 +3,234 @@
     x:Class="FHUBound.Views.StorePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Store">
-    <ContentPage.Content >
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+    xmlns:local="clr-namespace:FHUBound"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:FHUBound.Models"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Title="Store"
+    BackgroundColor="{StaticResource White}"
+    mc:Ignorable="d">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="385" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid Grid.Row="0" Padding="16,60,16,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Page Header -->
+                <Label                    
+                    LineBreakMode="WordWrap"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="0"
+                    Style="{StaticResource LargeText}"
+                    Text="Store" />
+
+                <flex:FlexButton
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0"
+                    Padding="8"
+                    HeightRequest="48"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
+                    BorderThickness="1"
+
+                    HighlightBackgroundColor="{StaticResource LightWhite}"
+                    HighlightBorderColor="{StaticResource Maroon}"
+                    HighlightForegroundColor="{StaticResource Maroon}"
+
+                    CornerRadius="16"
+                    FontFamily="{StaticResource BoldFont}"
+                    FontSize="25"
+                    ForegroundColor="{StaticResource LightWhite}"
+
+                    Text="325 🦁"
+                    VerticalOptions="Start"/>
+            </Grid>
+
+            <!-- CollectionView of Cards -->
+            <CollectionView
+                x:Name="CardsCollectionView"
+                Grid.Row="0"
+                Margin="{OnPlatform Android='0', iOS='0,0,0,80'}"
+                >
+                <d:CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type models:Card}">
+                        <models:Card
+                            ButtonText="Watch More"
+                            HeaderSubtitle="DEVO"
+                            HeaderTitle="Devos with David" />
+                        <models:Card
+                            ButtonText="Explore Majors"
+                            HeaderSubtitle="MAJORS"
+                            HeaderTitle="Find Your Fit"
+                            ImageUrl="istockpuzzle.jpg" />
+                    </x:Array>
+                </d:CollectionView.ItemsSource>
+
+                <!-- Spacer for page header-->
+                <CollectionView.Header>
+                    <StackLayout Padding="0,160,0,0" />
+                </CollectionView.Header>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <Grid Padding="16"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand">
+                            <pancake:PancakeView
+                                Padding="0"
+                                BackgroundGradientStartColor="{StaticResource LightWhite}"
+                                BackgroundGradientEndColor="{StaticResource Yellow}"
+                                BackgroundColor="{StaticResource LightWhite}"
+                                BackgroundGradientAngle="15"
+                                CornerRadius="16"
+                                HasShadow="True"
+                                IsClippedToBounds="False"
+                                HorizontalOptions="FillAndExpand">
+
+                                <Grid Padding="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--  Card Header  -->
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        Padding="16,16"
+                                        >
+                                        <Label
+                                            Margin="0"
+                                            LineBreakMode="NoWrap"
+                                            Style="{StaticResource HeaderSubtitle}"
+                                            Text="{Binding HeaderSubtitle}"
+                                            IsVisible="{Binding HeaderSubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                            HorizontalOptions="FillAndExpand" />
+                                        <Label
+                                            Margin="0"
+                                            Style="{StaticResource HeaderTitle}"
+                                            Text="{Binding HeaderTitle}"
+                                            IsVisible="{Binding HeaderTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                            HorizontalOptions="FillAndExpand" />
+                                    </StackLayout>
+
+                                    <!--  Card Body  -->
+                                    <Grid Grid.Row="1">
+                                        <StackLayout Margin="0" Padding="0">
+                                            <Image
+                                                Margin="0"
+                                                Aspect="AspectFill"
+                                                IsVisible="{Binding ImageUrl, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                                Source="{Binding ImageUrl}"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand" />
+
+                                            <StackLayout Padding="16,8" Spacing="4">
+                                                <Label
+                                                    Style="{StaticResource LargeText}"
+                                                    Text="{Binding BodyTitle}"
+                                                    IsVisible="{Binding BodyTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                                    TextColor="{Binding Black}"
+                                                    HorizontalTextAlignment="Center"/>
+
+                                                <Label
+                                                    Style="{StaticResource MediumLargeText}"
+                                                    Text="{Binding BodySubtitle}"
+                                                    IsVisible="{Binding BodySubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                                    TextColor="{Binding Black}"
+                                                    HorizontalTextAlignment="Center"/>
+
+                                                <Label
+                                                    Style="{StaticResource MediumText}"
+                                                    Text="{Binding BodyContent}"
+                                                    IsVisible="{Binding BodyContent, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                                    TextColor="{Binding Black}"
+                                                    HorizontalTextAlignment="Center" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+
+
+                                    <!--  Card Button  -->
+                                    <flex:FlexButton
+                                        Grid.Row="2"
+                                        Margin="0,0,0,20"
+                                        Padding="0"
+                                        WidthRequest="300"
+                                        HeightRequest="50"
+                                        BackgroundColor="{StaticResource FHUMaroon}"
+                                        BorderColor="{StaticResource LightWhite}"
+                                        BorderThickness="1"
+                                        CornerRadius="25"
+                                        FontFamily="{StaticResource BoldFont}"
+                                        FontSize="20"
+                                        ForegroundColor="{StaticResource LightWhite}"
+                                        HighlightBackgroundColor="{StaticResource LightWhite}"
+                                        HighlightBorderColor="{StaticResource FHUMaroon}"
+                                        HighlightForegroundColor="{StaticResource FHUMaroon}"
+                                        IsVisible="{Binding ButtonText, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
+                                        Text="{Binding ButtonText}"
+                                        HorizontalOptions="Center" /> 
+
+                                    <!--  Card Footer  -->
+                                    <!--BackgroundColor="{StaticResource Yellow}"
+                                    HighlightBorderColor="{StaticResource LightWhite}"
+                                    BorderThickness="1"
+                                    -->
+                                    <StackLayout
+                                        Grid.Row="3"
+                                        Margin="-20,0,-40,-20"
+                                        Padding="16,0,16,20"
+                                        >
+
+                                        <flex:FlexButton
+                                            Margin="0,10,0,10"
+                                            Padding="0,0,0,0"
+                                            HeightRequest="50"
+                                            WidthRequest="300"
+                                            
+                                            FontFamily="{StaticResource BlackFont}"
+                                            BackgroundColor="Transparent"
+                                            ForegroundColor="{StaticResource LightWhite}"
+                                            
+                                            HighlightBackgroundColor="Transparent" 
+                                            HighlightForegroundColor="{StaticResource Maroon}"
+                                            
+                                            />
+                                    </StackLayout>
+                                </Grid>
+                            </pancake:PancakeView>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
-
 </ContentPage>
