@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.ProfilePage">
     <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" Margin="10,40">
+
+            <Label Text="{Binding User.Username}"
+                   FontSize="Title"/>
+
+            <Label Text="{Binding User.CurrentPoints}"
+                   FontSize="Subtitle"/>
+
+            <Label Text="{Binding Message}"
+                   FontSize="Large"/>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
