@@ -39,8 +39,8 @@
             <ShellContent ContentTemplate="{DataTemplate views:StorePage}" />
         </Tab>
 
-        <Tab Title="Contact" Icon="icons8_chat_filled.png">
-            <ShellContent ContentTemplate="{DataTemplate views:ContactPage}" />
+        <Tab Title="Cookie" Icon="icons8_chat_filled.png">
+            <ShellContent ContentTemplate="{DataTemplate views:CookieClickerPage}" />
         </Tab>
 
         <Tab Title="Visit" Icon="icons8_visit_filled.png">
@@ -50,6 +50,8 @@
         <Tab Title="Profile" Icon="icons8_account_filled.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>
+       
+
     </TabBar>
     <!-- Optional Templates
     // These may be provided inline as below or as separate classes.
