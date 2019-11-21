@@ -1,5 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.ProfilePage">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FHUBound.Views.ProfilePage"
+             
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+            
     <ContentPage.Content>
         <ScrollView>
             <Grid>
@@ -7,35 +11,46 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <BoxView
                     Grid.Row="0"
-                    Grid.ColumnSpan="2"
+                  
                     HorizontalOptions="Fill"
                     VerticalOptions="Fill"
                     WidthRequest="300"
-                    HeightRequest="300"
+                    HeightRequest="200"
                     Color="#8d8d8d"
                     ></BoxView>
                 
-                <Image 
-                    Grid.Row="0"
-                    Grid.ColumnSpan="2"
-                    Source="second.jpg" 
-                    HorizontalOptions="Center"
-                    HeightRequest="200"
-                    WidthRequest="200"
-                 >
+                
                    
                     
                     
-                </Image>
+             
+
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <controls:CircleImage 
+                        Source="second.jpg" 
+                        WidthRequest="160" 
+                        HeightRequest="250" 
+                        Grid.Row="0" 
+                        Scale="1.5"
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center"
+                        
+                        
+                        ></controls:CircleImage>
+                </StackLayout>
 
                 <Label
-                    Text="Jack Cannon"
+                    Text="{Binding User.Username}"
                     Grid.Row="1"
-                    Grid.ColumnSpan="2"
+                    
                     HorizontalOptions="Center"
                     FontSize="40"
           
@@ -45,22 +60,64 @@
                 </Label>
 
                 <Label
-                    Text="Lion points"
-                    Grid.Row="2"
-                    Grid.Column="0"
+                    Text="{Binding User.Points}"
+                    FontSize="30"
                     HorizontalOptions="Center"
-                    FontSize="Body"
+                    Grid.Row="2" 
+                   
+                    
+                    
+                  ></Label>
+                <Label
+                    Text="{Binding User.TotalPoints}"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Grid.Row="3"
+                    
+                    
+                    >
+                    
+                </Label>
+
+                <ProgressBar
+                    Progress="0.75"
+                    ProgressColor="Maroon"
+                    Grid.Row="4"
+                   
+                    Margin="15"
+                    HeightRequest="40"
+                    
+                    ></ProgressBar>
+                <Label
+                    Text="Progress until next level"
+                    HorizontalOptions="Center"
+                    FontSize="30"
+                    Grid.Row="5"
+                    
                     ></Label>
 
                 <Label
-                    Text="next level"
-                    Grid.Row="2"
-                    Grid.Column="1"
+                    Text="{Binding User.Level}"
                     HorizontalOptions="Center"
-                    FontSize="Body"
-                    ></Label>
+                    FontSize="30"
+                    Grid.Row="6"
+                    >
+                    
+      
+                </Label>
 
-
+                <Button
+                    Grid.Row="7"
+                    Text="Edit"
+                    WidthRequest="20"
+                    x:Name="editButton"
+                    Clicked="editButton_Clicked"
+                    
+                    
+                    ></Button>
+                
+                
+                
 
             </Grid>
         </ScrollView>
