@@ -3,11 +3,12 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FHUBound.Services;
 using FHUBound.Views;
-
+using FHUBound.Models;
 namespace FHUBound
 {
     public partial class App : Application
     {
+        public static User CurrentUser { get; set; } 
 
         public App()
         {

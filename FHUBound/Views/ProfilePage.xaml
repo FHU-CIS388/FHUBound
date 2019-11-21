@@ -3,8 +3,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Image />
-                <Label />
+                <Image Source="{Binding User.ImageSource}"/>
+                <Label Resources="{Binding User.Name}"/>
             </StackLayout>
             <Grid>
                 <Grid.ColumnDefinitions>
