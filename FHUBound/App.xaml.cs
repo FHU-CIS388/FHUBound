@@ -13,7 +13,11 @@ namespace FHUBound
         public App()
         {
             InitializeComponent();
-
+            CurrentUser = new User()
+            {
+                Name = "John Doe",
+                ImagePath = "profile.jpg"
+            };
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }

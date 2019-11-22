@@ -1,17 +1,139 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.ProfilePage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="FHUBound.Views.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout>
-                <Image Source="{Binding User.ImageSource}"/>
-                <Label Resources="{Binding User.Name}"/>
-            </StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </StackLayout>
+        <pancake:PancakeView BackgroundGradientStartColor="White"
+                             BackgroundGradientEndColor="CornflowerBlue"
+                             BackgroundGradientAngle="23"
+                             >
+            <StackLayout Margin="10">
+                <StackLayout Padding="100, 50, 100, 25">
+
+                    <Frame CornerRadius="20"
+                           Padding="0"
+                           IsClippedToBounds="True"
+                           HasShadow="True">
+                        
+                        <Image Source="profile.jpg" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"                           
+                           />
+                        
+                    </Frame>
+
+                    <Label Text="John Doe"
+                           Style="{StaticResource HeaderTitle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+                
+                <BoxView HeightRequest="1"
+                         Color="Gray"
+                         Margin="50,10,50,10" 
+                         VerticalOptions="Start"/>
+                
+                <Grid Padding="10"
+                      VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        
+                    </Grid.RowDefinitions>
+                    <Label Text="Maroon &amp; Gold Day:"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           Style="{StaticResource BodyText}"
+                           Margin="5"/>
+
+                    <Label Text="Registered!"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           FontFamily="{StaticResource ItalicFont}"
+                           FontAttributes="Bold"
+                           Margin="5"/>
+
+                    <Label Text="Campus Tour:"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           Style="{StaticResource BodyText}"
+                           Margin="5"/>
+
+                    <Label Text="Not Registered"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           FontFamily="{StaticResource ItalicFont}" 
+                           Margin="5" />
+
+                    <Label Text="Interface:"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           Style="{StaticResource BodyText}"
+                           Margin="5"/>
+
+                    <Label Text="Not Registered"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           FontFamily="{StaticResource ItalicFont}" 
+                           Margin="5" />
+
+                    <Label Text="Classes:"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           Style="{StaticResource BodyText}"
+                           Margin="5"/>
+
+                    <Label Text="Not Registered"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           FontFamily="{StaticResource ItalicFont}" 
+                           Margin="5" />
+                </Grid>
+
+                <BoxView HeightRequest="1"
+                         Color="Gray"
+                         Margin="50,10,50,10" 
+                         VerticalOptions="Start"/>
+
+                <StackLayout>
+                    <Label Text="Bound Bucks: 540" 
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"                           
+                           Style="{StaticResource HeaderTitle}"
+                           Margin="10"/>
+                    
+                    <Button Text="Redeem BB!"
+                            TextColor="White"
+                            BorderColor="White"
+                            BorderWidth="3"
+                            CornerRadius="20"
+                            WidthRequest="250"
+                            BackgroundColor="CornflowerBlue"                            
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                
+            </StackLayout>            
+        </pancake:PancakeView>
+        
     </ContentPage.Content>
 </ContentPage>
