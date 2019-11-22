@@ -75,7 +75,11 @@
             <Setter Property="Opacity" Value="0.87" />
             <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
         </Style>
-
+        <Style x:Key="MediumItalicText" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Opacity" Value="0.87" />
+            <Setter Property="FontFamily" Value="{StaticResource ItalicFont}" />
+        </Style>
         <Style x:Key="MediumBoldText" TargetType="Label">
             <!--<Setter Property="FontAttributes" Value="Bold" />-->
             <Setter Property="FontSize" Value="20" />
