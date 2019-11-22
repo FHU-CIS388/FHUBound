@@ -211,4 +211,13 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shirt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lionPlush.jpg" />
+  </ItemGroup>
 </Project>

@@ -3,8 +3,54 @@
     x:Class="FHUBound.Views.StorePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+    xmlns:models="clr-namespace:FHUBound.Models"
+    xmlns:local="clr-namespace:FHUBound"
     Title="Store">
     <ContentPage.Content >
+        <StackLayout Spacing="10" x:Name="StoreStackLayout">
+            <CollectionView x:Name="StoreCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label
+                                Text="{Binding ItemName}"
+                                Style="{StaticResource MediumLargeText}"
+                                TextColor="{Binding Black}"
+                                HorizontalTextAlignment="Center"/>
+                              
+                            
+                            <Image
+                                Source="{Binding ImageUrl}"
+                                Aspect="AspectFill"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"/>
+                            <flex:FlexButton
+                                Margin="0,0,0,20"
+                                Padding="0"
+                                WidthRequest="300"
+                                HeightRequest="50"
+                                BackgroundColor="{StaticResource FHUMaroon}"
+                                BorderColor="{StaticResource LightWhite}"
+                                BorderThickness="1"
+                                CornerRadius="25"
+                                FontFamily="{StaticResource BoldFont}"
+                                FontSize="20"
+                                ForegroundColor="{StaticResource LightWhite}"
+                                HighlightBackgroundColor="{StaticResource LightWhite}"
+                                HighlightBorderColor="{StaticResource FHUMaroon}"
+                                HighlightForegroundColor="{StaticResource FHUMaroon}"
+                                Text="{Binding Price}"
+                                HorizontalOptions="Center"/>
+
+
+
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
 
     </ContentPage.Content>
 

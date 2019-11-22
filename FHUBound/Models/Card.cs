@@ -27,6 +27,7 @@ namespace FHUBound.Models
 
         public int Value { get; set; }
 
+
         public Card()
         {
         }
