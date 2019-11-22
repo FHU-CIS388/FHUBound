@@ -19,7 +19,7 @@
                 <!--  Header  -->
                 <Image
                     Grid.Row="0"
-                    Aspect="Fill"
+                    Aspect="AspectFill"
                     Source="header.jpg" />
 
                 <!--  Profile Image  -->
@@ -33,17 +33,18 @@
                         WidthRequest="150" />
 
                     <Label
-                        FontSize="Body"
+                        Margin="-20"
+                        FontSize="Large"
                         HorizontalTextAlignment="Center"
-                        Text="David Shannon" />
+                        Text="{Binding User.Username}" />
 
                     <!--  Bio  -->
                     <Label
                         Grid.Row="3"
-                        Margin="10,20,20,0"
+                        Margin="10,20,20,-5"
                         FontSize="Medium"
                         HorizontalTextAlignment="Center"
-                        Text="This is a bio about me. I'm pretty cool. I like bacon. And turtles."
+                        Text="{Binding Message}"
                         TextColor="Gray" />
 
                 </StackLayout>
@@ -62,7 +63,7 @@
                         <Label
                             FontSize="Title"
                             HorizontalTextAlignment="Center"
-                            Text="325" />
+                            Text="{Binding User.CurrentPoints}" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
@@ -77,18 +78,15 @@
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
-                            Text="Daily Challenges" />
+                            Text="Streak Days" />
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Vertical">
-                        <Label
-                            FontSize="Title"
-                            HorizontalTextAlignment="Center"
-                            Text="23" />
+                        <Image Source="Setting.png" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
-                            Text="Badges" />
+                            Text="Profile Settings" />
                     </StackLayout>
 
                 </Grid>

@@ -10,7 +10,8 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="Store"
-    BackgroundColor="{StaticResource LightWhite}">
+    BackgroundColor="{StaticResource LightWhite}"
+    Shell.NavBarIsVisible="True">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />

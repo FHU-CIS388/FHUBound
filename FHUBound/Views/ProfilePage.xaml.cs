@@ -9,10 +9,12 @@ namespace FHUBound.Views
 {
     public partial class ProfilePage : ContentPage
     {
+        ProfileViewModel viewModel;
         public ProfilePage()
         {
             InitializeComponent();
-            User = BindingContext = new ProfileViewModel();
+            BindingContext = viewModel = new ProfileViewModel();
+
         }
     }
 }

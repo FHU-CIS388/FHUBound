@@ -18,7 +18,12 @@ namespace FHUBound
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
 
-            CurrentUser = new User() { Username = "Person", CurrentPoints = 1000, Email = "kcasey@fhu.edu" };
+            CurrentUser = new User() 
+            { 
+                Username = "DShannon", 
+                CurrentPoints = 1000, 
+                Email = "Vcase@fhu.edu" 
+            };
         }
 
         protected override void OnStart()
