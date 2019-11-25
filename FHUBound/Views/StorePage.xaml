@@ -10,7 +10,8 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="Store"
-    BackgroundColor="{StaticResource LightWhite}">
+    BackgroundColor="{StaticResource LightWhite}"
+    mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
@@ -52,17 +53,17 @@
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
-                    Text="325 🦁"
+                    Text="{Binding User.CurrentPoints, StringFormat='{0:0} 🦁'}"
                     VerticalOptions="Start" />
             </Grid>
 
             <!--  CollectionView of Cards  -->
 
             <CollectionView
-                x:Name="ShopCollectionView"
                 Grid.Row="0"
                 Margin="{OnPlatform Android='0',
-                                    iOS='0,0,0,80'}">
+                                    iOS='0,0,0,80'}"
+                ItemsSource="{Binding StoreItemCards}">
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
                         <models:Card

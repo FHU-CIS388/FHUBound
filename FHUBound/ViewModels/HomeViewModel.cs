@@ -1,9 +1,5 @@
 ﻿using FHUBound.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -16,8 +12,6 @@ namespace FHUBound.ViewModels
         public HomeViewModel()
         {
             User = App.CurrentUser;
-
-
             Cards = new ObservableCollection<Card>();
             Cards.Add(new Card() { HeaderTitle = "Find Your Fit", HeaderSubtitle = "MAJORS", ImageUrl = "istockpuzzle.jpg", ButtonText = "Explore Majors", Value = 5 });
             Cards.Add(new Card() { HeaderTitle = "Devos with David", HeaderSubtitle = "DEVO", ButtonText = "Watch More", Value = 10 });
@@ -44,10 +38,13 @@ namespace FHUBound.ViewModels
         {
             get
             {
-                return new Command((c) =>
+                return new Command((value) =>
                 {
-                    var user = c as User;
-                    user.CurrentPoints--;
+                    int? intValue = value as int?;
+                    if (intValue != null)
+                    {
+                        User.CurrentPoints -= intValue.Value;
+                    }
                 });
             }
         }

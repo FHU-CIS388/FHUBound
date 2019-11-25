@@ -66,8 +66,8 @@
 
             <!--  CollectionView of Cards  -->
             <CollectionView
-                x:Name="CardsCollectionView"
                 Grid.Row="0"
+                x:Name="CardsCollectionView"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
                 ItemsSource="{Binding Cards}">
@@ -216,7 +216,6 @@
                                             HeightRequest="50"
                                             HighlightBackgroundColor="Transparent"
                                             HighlightForegroundColor="{StaticResource Maroon}"
-                                            IsVisible="False"
                                             Text="{Binding Value, StringFormat='Collect {0:0} 🦁'}"
                                             WidthRequest="300" />
                                     </StackLayout>
