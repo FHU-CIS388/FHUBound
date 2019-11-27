@@ -63,6 +63,7 @@
                 Grid.Row="0"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
+                x:Name="StoreCollectionView"
                 ItemsSource="{Binding StoreItemCards}">
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
@@ -159,7 +160,8 @@
                                             Margin="0,10,0,10"
                                             Padding="0,0,20,0"
                                             BackgroundColor="Transparent"
-                                            Clicked="OnAlertYesNoClicked"
+                                            ClickedCommand="{Binding Path=BindingContext.AlertPopUp, Source={x:Reference StoreCollectionView}}"
+                                            ClickedCommandParameter="{Binding Value}"
                                             FontFamily="{StaticResource BlackFont}"
                                             FontSize="28"
                                             ForegroundColor="{StaticResource LightWhite}"

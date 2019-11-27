@@ -1,6 +1,11 @@
 ﻿using FHUBound.Models;
+using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using Xamarin.Forms;
+using System.Collections.Generic;
+using System.Diagnostics;
+using FHUBound.ViewModels;
 
 namespace FHUBound.ViewModels
 {
@@ -25,6 +30,43 @@ namespace FHUBound.ViewModels
 
 
             //ShopCollectionView.ItemsSource = Cards;
+        }
+        public ICommand RemoveBucks
+        {
+            get
+            {
+                return new Command((value) =>
+                {
+                    int? intValue = value as int?;
+                    if (intValue != null)
+                    {
+                        User.CurrentPoints -= intValue.Value;
+                    }
+                });
+            }
+        }
+        public ICommand AlertPopUp
+        {
+            get
+            {
+                return new Command(async (value) =>
+                {
+                    bool answer = await App.Current.MainPage.DisplayAlert("Confirm BoundBuck Transaction", "Is your information in order?" + Environment.NewLine + Environment.NewLine + "David Shannon" + Environment.NewLine + Environment.NewLine + "7707 Greene Farm Ct." + Environment.NewLine + "Ypsilanti, MI 48197", "Yes, send my prize!", "Nevermind");
+                    if (answer == true)
+                    {
+                        int? intValue = value as int?;
+                        if (intValue<= User.CurrentPoints)
+                        {
+                            RemoveBucks.Execute(intValue);
+                        }
+                        else
+                        {
+                            bool alertNoteEnoughBucks = await App.Current.MainPage.DisplayAlert("Sorry!", "You don't have enough BoundBucks to redeem this item. :(", null, "Okay, Got it!");
+                        }
+                        
+                    }
+                });
+            }
         }
     }
 }
