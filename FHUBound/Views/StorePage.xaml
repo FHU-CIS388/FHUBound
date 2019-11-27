@@ -11,7 +11,7 @@
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="Store"
     BackgroundColor="{StaticResource LightWhite}"
-    Shell.NavBarIsVisible="True">
+    mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
@@ -53,17 +53,18 @@
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
-                    Text="325 🦁"
+                    Text="{Binding User.CurrentPoints, StringFormat='{0:0} 🦁'}"
                     VerticalOptions="Start" />
             </Grid>
 
             <!--  CollectionView of Cards  -->
 
             <CollectionView
-                x:Name="ShopCollectionView"
                 Grid.Row="0"
                 Margin="{OnPlatform Android='0',
-                                    iOS='0,0,0,80'}">
+                                    iOS='0,0,0,80'}"
+                x:Name="StoreCollectionView"
+                ItemsSource="{Binding StoreItemCards}">
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
                         <models:Card
@@ -159,7 +160,8 @@
                                             Margin="0,10,0,10"
                                             Padding="0,0,20,0"
                                             BackgroundColor="Transparent"
-                                            Clicked="OnAlertYesNoClicked"
+                                            ClickedCommand="{Binding Path=BindingContext.AlertPopUp, Source={x:Reference StoreCollectionView}}"
+                                            ClickedCommandParameter="{Binding Value}"
                                             FontFamily="{StaticResource BlackFont}"
                                             FontSize="28"
                                             ForegroundColor="{StaticResource LightWhite}"
