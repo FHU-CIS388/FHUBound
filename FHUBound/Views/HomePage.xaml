@@ -9,6 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:services="clr-namespace:FHUBound.Services"
     Title="FHU Bound"
     BackgroundColor="{StaticResource White}"
     Shell.NavBarIsVisible="False"
@@ -50,7 +51,7 @@
                     Grid.Column="1"
                     Margin="0"
                     Padding="8"
-                    BackgroundColor="{StaticResource Maroon}"
+                    BackgroundColor="{StaticResource GradientBlueDark}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
                     CornerRadius="16"
@@ -59,16 +60,16 @@
                     ForegroundColor="{StaticResource LightWhite}"
                     HeightRequest="48"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
-                    HighlightBorderColor="{StaticResource Maroon}"
-                    HighlightForegroundColor="{StaticResource Maroon}"
+                    HighlightBorderColor="{StaticResource GradientBlueDark}"
+                    HighlightForegroundColor="{StaticResource GradientBlueDark}"
                     Text="{Binding User.CurrentPoints, StringFormat='{0:0} 🦁'}"
                     VerticalOptions="Start" />
             </Grid>
 
             <!--  CollectionView of Cards  -->
             <CollectionView
-                Grid.Row="0"
                 x:Name="CardsCollectionView"
+                Grid.Row="0"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
                 ItemsSource="{Binding Cards}">
@@ -102,8 +103,8 @@
                                 Padding="0"
                                 BackgroundColor="{StaticResource LightWhite}"
                                 BackgroundGradientAngle="15"
-                                BackgroundGradientEndColor="{StaticResource Yellow}"
-                                BackgroundGradientStartColor="{StaticResource LightWhite}"
+                                BackgroundGradientEndColor="{StaticResource GradientBlueLight}"
+                                BackgroundGradientStartColor="{StaticResource GradientBlueDark}"
                                 CornerRadius="16"
                                 HasShadow="True"
                                 HorizontalOptions="FillAndExpand"
@@ -128,13 +129,15 @@
                                             IsVisible="{Binding HeaderSubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                             LineBreakMode="NoWrap"
                                             Style="{StaticResource HeaderSubtitle}"
-                                            Text="{Binding HeaderSubtitle}" />
+                                            Text="{Binding HeaderSubtitle}"
+                                            TextColor="{StaticResource LightWhite}" />
                                         <Label
                                             Margin="0"
                                             HorizontalOptions="FillAndExpand"
                                             IsVisible="{Binding HeaderTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                             Style="{StaticResource HeaderTitle}"
-                                            Text="{Binding HeaderTitle}" />
+                                            Text="{Binding HeaderTitle}"
+                                            TextColor="{StaticResource LightWhite}" />
                                     </StackLayout>
 
                                     <!--  Card Body  -->
@@ -154,21 +157,21 @@
                                                     IsVisible="{Binding BodyTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource LargeText}"
                                                     Text="{Binding BodyTitle}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
 
                                                 <Label
                                                     HorizontalTextAlignment="Center"
                                                     IsVisible="{Binding BodySubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource MediumLargeText}"
                                                     Text="{Binding BodySubtitle}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
 
                                                 <Label
                                                     HorizontalTextAlignment="Center"
                                                     IsVisible="{Binding BodyContent, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource MediumText}"
                                                     Text="{Binding BodyContent}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
                                             </StackLayout>
                                         </StackLayout>
                                     </Grid>
@@ -179,7 +182,7 @@
                                         Grid.Row="2"
                                         Margin="0,0,0,20"
                                         Padding="0"
-                                        BackgroundColor="{StaticResource FHUMaroon}"
+                                        BackgroundColor="{StaticResource GradientBlueLight}"
                                         BorderColor="{StaticResource LightWhite}"
                                         BorderThickness="1"
                                         CornerRadius="25"
@@ -188,8 +191,8 @@
                                         ForegroundColor="{StaticResource LightWhite}"
                                         HeightRequest="50"
                                         HighlightBackgroundColor="{StaticResource LightWhite}"
-                                        HighlightBorderColor="{StaticResource FHUMaroon}"
-                                        HighlightForegroundColor="{StaticResource FHUMaroon}"
+                                        HighlightBorderColor="{StaticResource GradientBlueLight}"
+                                        HighlightForegroundColor="{StaticResource GradientBlueLight}"
                                         HorizontalOptions="Center"
                                         IsVisible="{Binding ButtonText, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                         Text="{Binding ButtonText}"
@@ -211,13 +214,14 @@
                                             Padding="0,0,20,0"
                                             BackgroundColor="Transparent"
                                             ClickedCommand="{Binding Path=BindingContext.AddBucks, Source={x:Reference CardsCollectionView}}"
-                                            ClickedCommandParameter="{Binding Value}"
+                                            ClickedCommandParameter="{Binding .}"
                                             FontFamily="{StaticResource BlackFont}"
+                                            FontSize="28"
                                             ForegroundColor="{StaticResource LightWhite}"
                                             HeightRequest="50"
                                             HighlightBackgroundColor="Transparent"
-                                            HighlightForegroundColor="{StaticResource Maroon}"
-                                            FontSize="28"
+                                            HighlightForegroundColor="{StaticResource GradientBlueLight}"
+                                            IsVisible="{Binding PointsButtonBool}"
                                             Text="{Binding Value, StringFormat='Collect {0:0} 🦁'}"
                                             WidthRequest="300" />
                                     </StackLayout>

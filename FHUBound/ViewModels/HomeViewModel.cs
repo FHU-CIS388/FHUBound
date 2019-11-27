@@ -23,27 +23,16 @@ namespace FHUBound.ViewModels
         {
             get
             {
-                return new Command((value) =>
+                return new Command((c) =>
                 {
-                    int? intValue = value as int?;
+
+                    var card = c as Card;
+                    card.PointsButtonBool = false;
+
+                    int? intValue = card.Value as int?;
                     if (intValue != null)
                     {
                         User.CurrentPoints += intValue.Value;
-                    }
-                });
-            }
-        }
-
-        public ICommand RemoveBucks
-        {
-            get
-            {
-                return new Command((value) =>
-                {
-                    int? intValue = value as int?;
-                    if (intValue != null)
-                    {
-                        User.CurrentPoints -= intValue.Value;
                     }
                 });
             }

@@ -35,9 +35,12 @@ namespace FHUBound.ViewModels
         {
             get
             {
-                return new Command((value) =>
+                return new Command((c) =>
                 {
-                    int? intValue = value as int?;
+                    var card = c as Card;
+                    card.PointsButtonBool = false;
+
+                    int? intValue = card.Value as int?;
                     if (intValue != null)
                     {
                         User.CurrentPoints -= intValue.Value;
@@ -49,22 +52,23 @@ namespace FHUBound.ViewModels
         {
             get
             {
-                return new Command(async (value) =>
+                return new Command(async (c) =>
                 {
-                    bool answer = await App.Current.MainPage.DisplayAlert("Confirm BoundBuck Transaction", "Is your information in order?" + Environment.NewLine + Environment.NewLine + "David Shannon" + Environment.NewLine + Environment.NewLine + "7707 Greene Farm Ct." + Environment.NewLine + "Ypsilanti, MI 48197", "Yes, send my prize!", "Nevermind");
-                    if (answer == true)
+                    var card = c as Card;
+                    int? intValue = card.Value as int?;
+                    if (intValue <= User.CurrentPoints)
                     {
-                        int? intValue = value as int?;
-                        if (intValue<= User.CurrentPoints)
+                        bool answer = await App.Current.MainPage.DisplayAlert("Confirm BoundBuck Transaction", "Is your information in order?" + Environment.NewLine + Environment.NewLine + "David Shannon" + Environment.NewLine + Environment.NewLine + "7707 Greene Farm Ct." + Environment.NewLine + "Ypsilanti, MI 48197", "Yes, send my prize!", "Nevermind");
+                        if (answer == true)
                         {
-                            RemoveBucks.Execute(intValue);
-                        }
-                        else
-                        {
-                            bool alertNoteEnoughBucks = await App.Current.MainPage.DisplayAlert("Sorry!", "You don't have enough BoundBucks to redeem this item. :(", null, "Okay, Got it!");
-                        }
-                        
+                            RemoveBucks.Execute(c);
+                        }  
                     }
+                    else
+                    {
+                        bool alertNoteEnoughBucks = await App.Current.MainPage.DisplayAlert("Sorry!", "You don't have enough BoundBucks to redeem this item. :(", null, "Okay, Got it!");
+                    }
+                    
                 });
             }
         }
