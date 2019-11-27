@@ -66,8 +66,8 @@
 
             <!--  CollectionView of Cards  -->
             <CollectionView
-                x:Name="CardsCollectionView"
                 Grid.Row="0"
+                x:Name="CardsCollectionView"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
                 ItemsSource="{Binding Cards}">
@@ -207,7 +207,7 @@
 
                                         <flex:FlexButton
                                             Margin="0,10,0,10"
-                                            Padding="0,0,0,0"
+                                            Padding="0,0,20,0"
                                             BackgroundColor="Transparent"
                                             ClickedCommand="{Binding Path=BindingContext.AddBucks, Source={x:Reference CardsCollectionView}}"
                                             ClickedCommandParameter="{Binding Value}"
@@ -216,7 +216,7 @@
                                             HeightRequest="50"
                                             HighlightBackgroundColor="Transparent"
                                             HighlightForegroundColor="{StaticResource Maroon}"
-                                            IsVisible="False"
+                                            FontSize="28"
                                             Text="{Binding Value, StringFormat='Collect {0:0} 🦁'}"
                                             WidthRequest="300" />
                                     </StackLayout>
