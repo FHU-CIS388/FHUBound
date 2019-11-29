@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="FHUBound.Views.ProfilePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
     <ContentPage.Content>
 
         <ScrollView>
@@ -18,31 +19,32 @@
                 <!--  Header  -->
                 <Image
                     Grid.Row="0"
-                    Aspect="Fill"
+                    Aspect="AspectFill"
                     Source="header.jpg" />
 
                 <!--  Profile Image  -->
                 <StackLayout Grid.Row="1" TranslationY="-100">
 
-                    <Image
+                    <controls:CircleImage
                         Aspect="AspectFill"
                         HeightRequest="200"
                         HorizontalOptions="Center"
-                        Source="dshannon.jpg"
+                        Source="ds.jpg"
                         WidthRequest="150" />
 
                     <Label
-                        FontSize="Body"
+                        Margin="-20"
+                        FontSize="Large"
                         HorizontalTextAlignment="Center"
-                        Text="David Shannon" />
+                        Text="{Binding User.Username}" />
 
                     <!--  Bio  -->
                     <Label
                         Grid.Row="3"
-                        Margin="10,20,20,0"
+                        Margin="10,20,20,-5"
                         FontSize="Medium"
                         HorizontalTextAlignment="Center"
-                        Text="This is a bio about me. I'm pretty cool. I like bacon. And turtles."
+                        Text="{Binding Message}"
                         TextColor="Gray" />
 
                 </StackLayout>
@@ -61,7 +63,7 @@
                         <Label
                             FontSize="Title"
                             HorizontalTextAlignment="Center"
-                            Text="325" />
+                            Text="{Binding User.CurrentPoints}" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
@@ -76,18 +78,15 @@
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
-                            Text="Daily Challenges" />
+                            Text="Streak Days" />
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Vertical">
-                        <Label
-                            FontSize="Title"
-                            HorizontalTextAlignment="Center"
-                            Text="23" />
+                        <Image Source="Setting.png" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
-                            Text="Badges" />
+                            Text="Profile Settings" />
                     </StackLayout>
 
                 </Grid>

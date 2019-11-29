@@ -12,6 +12,7 @@
     xmlns:services="clr-namespace:FHUBound.Services"
     Title="FHU Bound"
     BackgroundColor="{StaticResource White}"
+    Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
     <ContentPage.Resources>
