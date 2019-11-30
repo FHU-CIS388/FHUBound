@@ -63,6 +63,8 @@
                     HighlightBorderColor="{StaticResource GradientBlueDark}"
                     HighlightForegroundColor="{StaticResource GradientBlueDark}"
                     Text="{Binding User.CurrentPoints, StringFormat='{0:0} 🦁'}"
+                    ClickedCommand="{Binding OpenCalendar}"
+                    ClickedCommandParameter="{Binding .}"
                     VerticalOptions="Start" />
             </Grid>
 

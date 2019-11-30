@@ -1,4 +1,5 @@
 ﻿using FHUBound.Models;
+using FHUBound.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -34,6 +35,21 @@ namespace FHUBound.ViewModels
                     {
                         User.CurrentPoints += intValue.Value;
                     }
+                });
+            }
+        }
+
+        //TODO: Button won't click
+        public Xamarin.Forms.INavigation Navigation { get; }
+        public ICommand OpenCalendar
+        {
+            get
+            {
+                return new Command(async (c) =>
+                {
+                    System.Console.WriteLine("OpenCalendar has been CLICKED");
+                    var streaks = new StreaksPage();
+                    await Navigation.PushModalAsync(streaks);
                 });
             }
         }
