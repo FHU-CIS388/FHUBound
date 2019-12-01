@@ -16,7 +16,7 @@
             </Grid.RowDefinitions>
 
             <Label
-                Text="Cookie Clicker!"
+                Text="{Binding CookieGame.Clicks}"
                 HorizontalOptions="Center"
                 Grid.Row="0"
                 FontSize="30"
@@ -30,6 +30,7 @@
                 Grid.Row="1"
                 
                 ></ImageButton>
+            
 
 
 

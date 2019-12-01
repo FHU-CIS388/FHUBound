@@ -11,5 +11,21 @@ namespace FHUBound.Views
         {
             InitializeComponent();
         }
+
+       
+
+        private void  testButton_Clicked(object sender, EventArgs e)
+        {
+            if (App.CurrentUser.Points <= 100)
+            {
+                 DisplayAlert("Error", "not enough points", "OK");
+            }
+            else
+            {
+                DisplayAlert("SUCCESS", "you bought this item", "OK");
+            }
+        }
+
+       
     }
 }
