@@ -63,7 +63,7 @@
                     FontSize="25"
                     ForegroundColor="{StaticResource LightWhite}"
 
-                    Text="325 🦁"
+                    Text="700 🦁"
                     VerticalOptions="Start"/>
             </Grid>
 
