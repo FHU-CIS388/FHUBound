@@ -15,6 +15,7 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <!--  Header  -->
                 <Image
@@ -76,7 +77,7 @@
                         <Label
                             FontSize="Title"
                             HorizontalTextAlignment="Center"
-                            Text="4" />
+                            Text="12" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
@@ -92,6 +93,12 @@
                     </StackLayout>
 
                 </Grid>
+                <StackLayout Grid.Row="4">
+                    <ProgressBar
+                        Progress=".7"
+                        TranslationY="-60"
+                        WidthRequest="20" />
+                </StackLayout>
 
             </Grid>
 

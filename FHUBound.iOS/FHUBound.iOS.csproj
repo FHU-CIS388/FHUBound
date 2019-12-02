@@ -244,4 +244,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\ds.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar.png" />
+  </ItemGroup>
 </Project>

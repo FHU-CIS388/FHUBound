@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FHUBound.Models;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using FHUBound.Models;
 
 namespace FHUBound.Views
 {

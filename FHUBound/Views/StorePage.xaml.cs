@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using FHUBound.Models;
-using FHUBound.ViewModels;
+﻿using FHUBound.ViewModels;
 using Xamarin.Forms;
 
 namespace FHUBound.Views

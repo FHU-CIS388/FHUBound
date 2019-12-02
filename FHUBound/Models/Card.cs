@@ -1,8 +1,16 @@
-﻿using System;
+﻿using FHUBound.ViewModels;
+using System;
 namespace FHUBound.Models
 {
-    public class Card
+    public class Card : BaseViewModel
     {
+        private bool pointsButtonBool = true;
+        public bool PointsButtonBool
+        {
+            get { return pointsButtonBool; }
+            set { SetProperty(ref pointsButtonBool, value); }
+        }
+
         public string HeaderTitle { get; set; } = "";
         public string HeaderSubtitle { get; set; } = "";
         public string HeaderBackgroundColor { get; set; } = "";
@@ -22,7 +30,7 @@ namespace FHUBound.Models
         public string ButtonBackgroundColor { get; set; } = "";
         public string ButtonForegroundColor { get; set; } = "";
 
-        public DateTime StartDateTime { get; set; } 
+        public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
 
         public int Value { get; set; }
