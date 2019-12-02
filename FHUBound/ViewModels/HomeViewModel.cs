@@ -26,7 +26,6 @@ namespace FHUBound.ViewModels
             {
                 return new Command((c) =>
                 {
-
                     var card = c as Card;
                     card.PointsButtonBool = false;
 
@@ -34,21 +33,6 @@ namespace FHUBound.ViewModels
                     if (intValue != null)
                     {
                         User.CurrentPoints += intValue.Value;
-                    }
-                });
-            }
-        }
-
-        public ICommand RemoveBucks
-        {
-            get
-            {
-                return new Command((value) =>
-                {
-                    int? intValue = value as int?;
-                    if (intValue != null)
-                    {
-                        User.CurrentPoints -= intValue.Value;
                     }
                 });
             }

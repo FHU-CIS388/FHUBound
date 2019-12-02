@@ -10,7 +10,6 @@ namespace FHUBound.Models
             get { return pointsButtonBool; }
             set { SetProperty(ref pointsButtonBool, value); }
         }
-
         public string HeaderTitle { get; set; } = "";
         public string HeaderSubtitle { get; set; } = "";
         public string HeaderBackgroundColor { get; set; } = "";

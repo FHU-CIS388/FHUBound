@@ -9,6 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:services="clr-namespace:FHUBound.Services"
     Title="FHU Bound"
     BackgroundColor="{StaticResource White}"
     Shell.NavBarIsVisible="False"
@@ -52,7 +53,7 @@
                     Grid.Column="1"
                     Margin="0,0,0,0"
                     Padding="8"
-                    BackgroundColor="{StaticResource Maroon}"
+                    BackgroundColor="{StaticResource GradientBlueDark}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
                     Clicked="OpenCalendar"
@@ -131,13 +132,15 @@
                                             IsVisible="{Binding HeaderSubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                             LineBreakMode="NoWrap"
                                             Style="{StaticResource HeaderSubtitle}"
-                                            Text="{Binding HeaderSubtitle}" />
+                                            Text="{Binding HeaderSubtitle}"
+                                            TextColor="{StaticResource LightWhite}" />
                                         <Label
                                             Margin="0"
                                             HorizontalOptions="FillAndExpand"
                                             IsVisible="{Binding HeaderTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                             Style="{StaticResource HeaderTitle}"
-                                            Text="{Binding HeaderTitle}" />
+                                            Text="{Binding HeaderTitle}"
+                                            TextColor="{StaticResource LightWhite}" />
                                     </StackLayout>
 
                                     <!--  Card Body  -->
@@ -157,21 +160,21 @@
                                                     IsVisible="{Binding BodyTitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource LargeText}"
                                                     Text="{Binding BodyTitle}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
 
                                                 <Label
                                                     HorizontalTextAlignment="Center"
                                                     IsVisible="{Binding BodySubtitle, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource MediumLargeText}"
                                                     Text="{Binding BodySubtitle}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
 
                                                 <Label
                                                     HorizontalTextAlignment="Center"
                                                     IsVisible="{Binding BodyContent, Converter={StaticResource StringNullOrEmptyBoolConverter}}"
                                                     Style="{StaticResource MediumText}"
                                                     Text="{Binding BodyContent}"
-                                                    TextColor="{Binding Black}" />
+                                                    TextColor="{StaticResource LightWhite}" />
                                             </StackLayout>
                                         </StackLayout>
                                     </Grid>
