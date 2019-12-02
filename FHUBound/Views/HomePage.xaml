@@ -31,6 +31,7 @@
             <Grid Grid.Row="0" Padding="16,60,16,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -41,6 +42,7 @@
                 <Label
                     Grid.Row="0"
                     Grid.Column="0"
+                    Margin="0,0,0,0"
                     Padding="0"
                     LineBreakMode="WordWrap"
                     Style="{StaticResource LargeText}"
@@ -49,11 +51,12 @@
                 <flex:FlexButton
                     Grid.Row="0"
                     Grid.Column="1"
-                    Margin="0"
+                    Margin="0,0,0,0"
                     Padding="8"
                     BackgroundColor="{StaticResource GradientBlueDark}"
                     BorderColor="{StaticResource LightWhite}"
                     BorderThickness="1"
+                    Clicked="OpenCalendar"
                     CornerRadius="16"
                     FontFamily="{StaticResource BoldFont}"
                     FontSize="25"
@@ -69,7 +72,7 @@
             <!--  CollectionView of Cards  -->
             <CollectionView
                 x:Name="CardsCollectionView"
-                Grid.Row="0"
+                Grid.Row="1"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
                 ItemsSource="{Binding Cards}">

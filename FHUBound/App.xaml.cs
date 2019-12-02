@@ -1,9 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using FHUBound.Models;
 using FHUBound.Services;
-using FHUBound.Views;
-using FHUBound.Models;
+using Xamarin.Forms;
 
 namespace FHUBound
 {
@@ -18,11 +15,11 @@ namespace FHUBound
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
 
-            CurrentUser = new User() 
-            { 
-                Username = "DShannon", 
-                CurrentPoints = 1000, 
-                Email = "Vcase@fhu.edu" 
+            CurrentUser = new User()
+            {
+                Username = "DShannon",
+                CurrentPoints = 1000,
+                Email = "Vcase@fhu.edu"
             };
         }
 

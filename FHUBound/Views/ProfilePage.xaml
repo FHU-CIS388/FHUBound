@@ -3,7 +3,8 @@
     x:Class="FHUBound.Views.ProfilePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    Shell.NavBarIsVisible="False">
     <ContentPage.Content>
 
         <ScrollView>
@@ -12,14 +13,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <!--  Header  -->
                 <Image
                     Grid.Row="0"
-                    Aspect="AspectFill"
+                    Aspect="Fill"
                     Source="header.jpg" />
 
                 <!--  Profile Image  -->
@@ -27,6 +28,8 @@
 
                     <controls:CircleImage
                         Aspect="AspectFill"
+                        BorderColor="Black"
+                        BorderThickness="3"
                         HeightRequest="200"
                         HorizontalOptions="Center"
                         Source="ds.jpg"
@@ -74,7 +77,7 @@
                         <Label
                             FontSize="Title"
                             HorizontalTextAlignment="Center"
-                            Text="4" />
+                            Text="12" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"
@@ -90,6 +93,12 @@
                     </StackLayout>
 
                 </Grid>
+                <StackLayout Grid.Row="4">
+                    <ProgressBar
+                        Progress=".7"
+                        TranslationY="-60"
+                        WidthRequest="20" />
+                </StackLayout>
 
             </Grid>
 
