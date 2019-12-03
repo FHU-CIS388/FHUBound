@@ -9,15 +9,21 @@
         <StackLayout>
             <Entry 
                 x:Name="UserNameEntry" 
-                Placeholder="New UserName"
+                Placeholder="{Binding User.Username}"
                 
                 ></Entry>
             <Entry 
                 x:Name="FirstNameEntry"
-                Placeholder="New First Name"></Entry>
+                Placeholder= "{Binding User.FirstName}"></Entry>
             <Entry 
                 x:Name="LastNameEntry"
-                Placeholder="New Last Name"></Entry>
+                Placeholder="{Binding User.LastName}"></Entry>
+
+            <Entry 
+                x:Name="PointsEntry"
+                Keyboard="Numeric"
+                Placeholder="{Binding User.Points}"></Entry>
+
             <Button 
                 Text="Save" 
                 x:Name="saveButton" 

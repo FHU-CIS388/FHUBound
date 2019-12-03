@@ -29,7 +29,7 @@
                 VerticalOptions="Center"
                 Grid.Row="1"
                 x:Name="stacheButton"
-                Clicked="stacheButton_Clicked"
+                Command="{Binding IncrementClickCommand}"
                 ></ImageButton>
             
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FHUBound.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace FHUBound.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditProfilePage : ContentPage
     {
+        EditProfileViewModel viewModel;
+
         public EditProfilePage()
         {
             InitializeComponent();
+
+            BindingContext = viewModel = new EditProfileViewModel();
         }
 
         private void saveButton_Clicked(object sender, EventArgs e)
@@ -34,8 +39,16 @@ namespace FHUBound.Views
                 App.CurrentUser.LastName = LastNameEntry.Text;
                 LastNameEntry.Text = "";
             }
+            if (PointsEntry.Text != null)
+            {
+               
+                App.CurrentUser.Points = int.Parse(PointsEntry.Text);
+                App.CurrentUser.TotalPoints += int.Parse(PointsEntry.Text);
+                App.CurrentUser.CalculateLevel();
+                PointsEntry.Text = "";
+            }
 
-            App.CurrentUser.LastName = LastNameEntry.Text;
+
         }
 
         private async void backButton_Clicked(object sender, EventArgs e)

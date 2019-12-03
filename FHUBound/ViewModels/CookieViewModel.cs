@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using FHUBound.Models;
+using Xamarin.Forms;
+
 namespace FHUBound.ViewModels
 {
     public class CookieViewModel : BaseViewModel
@@ -11,16 +14,25 @@ namespace FHUBound.ViewModels
 
         public CookieViewModel()
         {
-            CookieGame = new CookieGame();
-            CookieGame.Clicks = 0;
-            CookieGame.firstLevel = 20;
-            CookieGame.secondLevel = 50;
-            CookieGame.thirdLevel = 100;
-            CookieGame.fourthLevel = 200;
-            CookieGame.fifthLevel = 350;
-            CookieGame.sixthLevel = 500;
+            
+
+            IncrementClickCommand = new Command(IncrementClick);
         }
 
+        
+
+
+       
+
+
+        public ICommand IncrementClickCommand { get; }
+
+        void IncrementClick()
+        {
+            App.CurrentUser.LastName = "whoops";
+            CookieGame.Clicks += 1;
+            OnPropertyChanged(nameof(CookieGame.Clicks));
+        }
 
 
 
