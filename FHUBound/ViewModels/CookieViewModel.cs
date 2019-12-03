@@ -21,5 +21,8 @@ namespace FHUBound.ViewModels
             CookieGame.sixthLevel = 500;
         }
 
+
+
+
     }
 }

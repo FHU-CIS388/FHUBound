@@ -18,12 +18,44 @@
                 <StackLayout Grid.Row="0">
                     <Image Source="icons8_t_shirt_100.png"></Image>
                         <Button
-                       x:Name="testButton"
+                       x:Name="firstButton"
                        Clicked="testButton_Clicked"
                         Text="buy"
                         ></Button>
                 </StackLayout>
-                
+                <StackLayout Grid.Row="1">
+                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Button
+                       x:Name="secondButton"
+                       Clicked="testButton_Clicked"
+                        Text="buy"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Button
+                       x:Name="thirdButton"
+                       Clicked="testButton_Clicked"
+                        Text="buy"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Button
+                       x:Name="fourthButton"
+                       Clicked="testButton_Clicked"
+                        Text="buy"
+                        ></Button>
+                </StackLayout>
+                <StackLayout Grid.Row="4">
+                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Button
+                       x:Name="fifthButton"
+                       Clicked="testButton_Clicked"
+                        Text="buy"
+                        ></Button>
+                </StackLayout>
+
 
 
             </Grid>

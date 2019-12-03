@@ -28,7 +28,8 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Grid.Row="1"
-                
+                x:Name="stacheButton"
+                Clicked="stacheButton_Clicked"
                 ></ImageButton>
             
 
