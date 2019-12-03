@@ -1,12 +1,23 @@
-﻿using System;
+﻿using FHUBound.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace FHUBound.Models
 {
-    public class CookieGame
+    public class CookieGame : BaseViewModel
     {
-        public int Clicks { get; set; }
+
+        
+
+        private int clicks;
+        public int Clicks
+        {
+            get { return clicks; }
+            set { SetProperty(ref clicks, value); }
+        }
+
 
         public int firstLevel { get; set; }
 
@@ -20,8 +31,6 @@ namespace FHUBound.Models
 
         public int sixthLevel { get; set; }
 
-
-
-
+ 
     }
 }

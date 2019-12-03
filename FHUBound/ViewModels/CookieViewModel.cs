@@ -11,27 +11,38 @@ namespace FHUBound.ViewModels
     {
 
         public CookieGame CookieGame { get; set; }
+        public ImageButton ImageButton { get; set; }
 
-        public CookieViewModel()
+        public CookieViewModel(ImageButton imageButton)
         {
-            
+            CookieGame = new CookieGame();
+            ImageButton = imageButton;
 
             IncrementClickCommand = new Command(IncrementClick);
         }
 
-        
-
-
-       
-
 
         public ICommand IncrementClickCommand { get; }
 
-        void IncrementClick()
+        public bool hold = true;
+
+        async void IncrementClick()
         {
-            App.CurrentUser.LastName = "whoops";
+            
             CookieGame.Clicks += 1;
-            OnPropertyChanged(nameof(CookieGame.Clicks));
+
+            if (hold)
+            {
+                await ImageButton.TranslateTo(50, 50, 500);
+                hold = false;
+            }
+            else
+            {
+                await ImageButton.TranslateTo(-50, -50, 500);
+                hold = true;
+            }
+            
+            
         }
 
 
