@@ -18,6 +18,29 @@ namespace FHUBound.Models
             set { SetProperty(ref clicks, value); }
         }
 
+        private int buttonHeight = 100;
+        public int ButtonHeight
+        {
+            get { return buttonHeight; }
+            set { SetProperty(ref buttonHeight, value); }
+        }
+
+
+        private int buttonWidth = 100;
+        public int ButtonWidth
+        {
+            get { return buttonWidth; }
+            set { SetProperty(ref buttonWidth, value); }
+        }
+
+        private bool playAnimation = false;
+        public bool PlayAnimation
+        {
+            get { return playAnimation; }
+            set { SetProperty(ref playAnimation, value); }
+        }
+
+
 
         public int firstLevel { get; set; }
 
