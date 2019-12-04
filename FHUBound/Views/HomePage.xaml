@@ -42,7 +42,7 @@
                     Grid.Column="0"
                     Padding="0"
                     Style="{StaticResource LargeText}"
-                    Text="Good morning, Cameron" />
+                    Text="Hello, Cameron!" />
 
                 <flex:FlexButton
                     Grid.Row="0"
