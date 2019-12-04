@@ -15,8 +15,15 @@ namespace FHUBound.Views
             InitializeComponent();
 
             Cards = new ObservableCollection<Card>();
-            Cards.Add(new Card() { BodyTitle = "Cameron Maguffee", ButtonText = "Edit Username" });
-            Cards.Add(new Card() { HeaderTitle = "Profile Pic", ImageUrl = "fhu_square.jpg", ButtonText = "Change Pic"});
+            Cards.Add(new Card() {
+                BodyTitle = "Cameron Maguffee",
+                ButtonText = "Edit Username"
+            });
+            Cards.Add(new Card() {
+                HeaderTitle = "Profile Pic",
+                ImageUrl = "fhu_square.jpg",
+                ButtonText = "Change Pic"
+            });
             Cards.Add(new Card() {
                 HeaderTitle = "Badges Collected",
                 BodyTitle = "😃  ❤️  😂  🎂  👨🏻‍🦳",
