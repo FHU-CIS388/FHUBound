@@ -25,7 +25,7 @@
                     
                 </StackLayout>
                 <StackLayout Grid.Row="1" Grid.Column="0">
-                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}">Freed Hardeman T-Shirt!</Label>
+                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}" Text="{Binding TShirt.Name}"></Label>
                     
                     <flex:FlexButton
                     Grid.Row="0"
@@ -46,7 +46,7 @@
                     FontSize="25"
                     ForegroundColor="{StaticResource LightWhite}"
 
-                    Text="25 PTS"
+                    Text="25 PT"
                     VerticalOptions="Start"
                     />
                     
