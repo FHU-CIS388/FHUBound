@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Flex;
 using Foundation;
+
+using Lottie.Forms.iOS.Renderers;
 using UIKit;
 
 namespace FHUBound.iOS
@@ -24,7 +26,7 @@ namespace FHUBound.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
-
+            AnimationViewRenderer.Init();
             FlexButton.Init();
 
 

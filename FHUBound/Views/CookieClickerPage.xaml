@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="FHUBound.Views.CookieClickerPage">
     <ContentPage.Content>
@@ -31,8 +32,13 @@
                 x:Name="stacheButton"
                 Command="{Binding IncrementClickCommand}"
                 ></ImageButton>
-            
 
+            <forms:AnimationView x:Name="AnimationView"
+                         Animation="heart.json"
+                         Loop="True"
+                         AutoPlay="True"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand" />
 
 
 
