@@ -3,16 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
              mc:Ignorable="d"
              x:Class="FHUBound.Views.StreaksPage">
     
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Close" Command="{Binding CloseStreaksPage}"/>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Image Source="calendar.png"/>
+            <Image
+                HorizontalOptions="CenterAndExpand"
+                Source="streaks_calendar.png"
+                Margin="0,0,0,0"
+                VerticalOptions="CenterAndExpand"
+                />
+            <flex:FlexButton
+                Margin="20,0,20,20"
+                BackgroundColor="#fe4265"
+                ClickedCommand="{Binding AddStreakPoints}"
+                ClickedCommandParameter="1200"
+                CornerRadius="15"
+                FontSize="23"
+                HeightRequest="70"
+                Text="COLLECT YOUR DAILY PRIZE"
+                ForegroundColor="{StaticResource LightWhite}"
+                WidthRequest="400" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

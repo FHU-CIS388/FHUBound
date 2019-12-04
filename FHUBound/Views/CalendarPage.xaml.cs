@@ -1,5 +1,4 @@
-﻿using FHUBound.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace FHUBound.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StreaksPage : ContentPage
+    public partial class CalendarPage : ContentPage
     {
-        StreaksViewModel viewModel;
-        public StreaksPage()
+        public CalendarPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new StreaksViewModel();
-            viewModel.Navigation = Navigation;
-        }     
+        }
+        async void CloseCalendarPage(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

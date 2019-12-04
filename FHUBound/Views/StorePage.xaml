@@ -10,6 +10,7 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="Store"
+    d:NavigationPage.HasNavigationBar="False"
     BackgroundColor="{StaticResource LightWhite}"
     mc:Ignorable="d">
     <ContentPage.Resources>

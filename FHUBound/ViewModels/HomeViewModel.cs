@@ -41,17 +41,17 @@ namespace FHUBound.ViewModels
 
         //TODO: Button won't click
         public Xamarin.Forms.INavigation Navigation { get; }
-        public ICommand OpenCalendar
-        {
-            get
-            {
-                return new Command(async (c) =>
-                {
-                    System.Console.WriteLine("OpenCalendar has been CLICKED");
-                    var streaks = new StreaksPage();
-                    await Navigation.PushModalAsync(streaks);
-                });
-            }
-        }
+        //public ICommand OpenCalendar
+        //{
+        //    get
+        //    {
+        //        return new Command(async (c) =>
+        //        {
+        //            System.Console.WriteLine("OpenCalendar has been CLICKED");
+        //            var streaks = new StreaksPage();
+        //            await Navigation.PushModalAsync(streaks);
+        //        });
+        //    }
+        //}
     }
 }
