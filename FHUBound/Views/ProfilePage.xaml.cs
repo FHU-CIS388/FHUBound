@@ -19,7 +19,7 @@ namespace FHUBound.Views
             Cards.Add(new Card() { HeaderTitle = "Profile Pic", ImageUrl = "fhu_square.jpg", ButtonText = "Change Pic"});
             Cards.Add(new Card() {
                 HeaderTitle = "Badges Collected",
-                BodyTitle = "😃  ❤️  👨🏻‍🦳  🔒  🔒  🔒  🔒",
+                BodyTitle = "😃  ❤️  😂  🎂  👨🏻‍🦳",
                 BodyContent = "Newest badge: 👨🏻‍🦳 (David Shannon) Collect 500 points"
             });
 
