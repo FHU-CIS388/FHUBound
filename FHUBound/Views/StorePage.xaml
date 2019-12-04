@@ -6,7 +6,7 @@
     xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
     Title="Store">
     <ContentPage.Content >
-        <ScrollView>
+        <!--<ScrollView>
             <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -25,7 +25,7 @@
                     
                 </StackLayout>
                 <StackLayout Grid.Row="1" Grid.Column="0">
-                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}" Text="{Binding TShirt.Name}"></Label>
+                    <Label FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource Maroon}" Text="{Binding Name}"></Label>
                     
                     <flex:FlexButton
                     Grid.Row="0"
@@ -54,7 +54,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="1">
-                    <Image Source="freedtshirt.jpg" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
+                    <Image Source="{Binding ImageURL}" Grid.Row="0" Grid.Column="1" HeightRequest="130" />
                 </StackLayout>
                 
 
@@ -129,7 +129,31 @@
 
 
             </Grid>
-        </ScrollView>
+        </ScrollView>-->
+
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding StoreItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="{StaticResource FHUMaroon}"
+                               CornerRadius="10">
+                            <Label Text="{Binding Name}"/>
+
+
+
+                        </Frame>
+                        
+                        
+                    </DataTemplate>
+                    
+                    
+                </CollectionView.ItemTemplate>
+                
+                
+            </CollectionView>
+            
+            
+        </StackLayout>
     </ContentPage.Content>
 
 </ContentPage>

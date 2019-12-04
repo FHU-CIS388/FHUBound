@@ -25,5 +25,10 @@ namespace FHUBound.Views
            viewModel = new StoreViewModel();
            BindingContext = viewModel;
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (viewModel.StoreItems.Count == 0) viewModel.LoadItemsCommand.Execute(null);
+        }
     }
 }
