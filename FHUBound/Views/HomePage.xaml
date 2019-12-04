@@ -10,7 +10,7 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="FHU Bound"
-    BackgroundColor="{StaticResource White}"
+    BackgroundColor="{StaticResource LightWhite}"
     mc:Ignorable="d">
 
     <ContentPage.Resources>
@@ -100,10 +100,7 @@
                               VerticalOptions="FillAndExpand">
                             <pancake:PancakeView
                                 Padding="0"
-                                BackgroundGradientStartColor="{StaticResource LightWhite}"
-                                BackgroundGradientEndColor="{StaticResource Yellow}"
-                                BackgroundColor="{StaticResource LightWhite}"
-                                BackgroundGradientAngle="15"
+                                BackgroundColor="{StaticResource Yellow}"
                                 CornerRadius="16"
                                 HasShadow="True"
                                 IsClippedToBounds="False"
@@ -198,11 +195,6 @@
                                         Text="{Binding ButtonText}"
                                         HorizontalOptions="Center" /> 
 
-                                    <!--  Card Footer  -->
-                                    <!--BackgroundColor="{StaticResource Yellow}"
-                                    HighlightBorderColor="{StaticResource LightWhite}"
-                                    BorderThickness="1"
-                                    -->
                                     <StackLayout
                                         Grid.Row="3"
                                         Margin="-20,0,-40,-20"

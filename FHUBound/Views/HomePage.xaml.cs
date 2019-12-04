@@ -16,6 +16,14 @@ namespace FHUBound.Views
 
             Cards = new ObservableCollection<Card>();
 
+            Cards.Add(new Card()
+            {
+                HeaderTitle = "Baseball & Softball",
+                HeaderSubtitle = "Our sports teams are awesome!",
+                ImageUrl = "fhubaseball.jpg",
+                ButtonText = "Learn More",
+                Value = 30
+            });
             Cards.Add(new Card() {
                 HeaderTitle = "RUSH 2020",
                 HeaderSubtitle = "Experience new spirital heights.",
@@ -23,16 +31,24 @@ namespace FHUBound.Views
                 ButtonText = "REGISTER",
                 Value = 25
             });
+            Cards.Add(new Card()
+            {
+                HeaderTitle = "Housing",
+                HeaderSubtitle = "Where to Stay",
+                ImageUrl = "Dorms_1.JPG",
+                ButtonText = "Explore Dorms",
+                Value = 20
+            });
             Cards.Add(new Card() {
                 HeaderTitle = "So Much Fun",
                 HeaderSubtitle = "FHU FUN",
                 ImageUrl = "fhu_color_belltower.png",
-                Value = 5
+                Value = 10
             });
             Cards.Add(new Card() {
                 HeaderTitle = "Find Your Fit",
                 HeaderSubtitle = "MAJORS",
-                ImageUrl= "istockpuzzle.jpg",
+                ImageUrl= "mat.jpg",
                 ButtonText="Explore Majors",
                 Value = 5
             });

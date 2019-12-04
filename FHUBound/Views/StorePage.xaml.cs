@@ -15,9 +15,16 @@ namespace FHUBound.Views
             InitializeComponent();
 
             Cards = new ObservableCollection<Card>();
-            Cards.Add(new Card() {
+            Cards.Add(new Card()
+            {
                 HeaderTitle = "Study Abroad Pamphlet",
                 ImageUrl = "study_abroad_2.png",
+                ButtonText = "Buy (200 points)"
+            });
+            Cards.Add(new Card()
+            {
+                HeaderTitle = "Basketball Game Ticket",
+                ImageUrl = "fhulions.jpg",
                 ButtonText = "Buy (500 points)"
             });
             Cards.Add(new Card() {
@@ -25,7 +32,12 @@ namespace FHUBound.Views
                 ImageUrl = "fhu_color_belltower.png",
                 ButtonText = "Buy (1000 points)"
             });
-
+            Cards.Add(new Card()
+            {
+                HeaderTitle = "Saucer Chair",
+                ImageUrl = "saucerchair.jpg",
+                ButtonText = "Buy (2500 points)"
+            });
 
             CardsCollectionView.ItemsSource = Cards;
 
