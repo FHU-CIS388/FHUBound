@@ -9,11 +9,12 @@ namespace FHUBound.ViewModels
 {
     class ProfileViewModel : BaseViewModel
     {
-        User CurrentUser { get; set; }
+        public User CurrentUser { get; set; }
         string Name { get; set; }
         public ProfileViewModel()
         {
-                     
+            CurrentUser = App.CurrentUser;
+
         }
     }
 }

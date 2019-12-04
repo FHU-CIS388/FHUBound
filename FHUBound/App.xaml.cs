@@ -17,6 +17,7 @@ namespace FHUBound
             {
                 Name = "John Doe",
                 ImagePath = "profile.jpg"
+
             };
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();

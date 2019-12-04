@@ -20,7 +20,7 @@
                         
                     </Frame>
 
-                    <Label Text="John Doe"
+                    <Label Text="{Binding CurrentUser.Name}"
                            Style="{StaticResource HeaderTitle}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
