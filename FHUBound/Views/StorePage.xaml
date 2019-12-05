@@ -10,7 +10,8 @@
     xmlns:models="clr-namespace:FHUBound.Models"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="Store"
-    BackgroundColor="{StaticResource LightWhite}"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="{StaticResource White}"
     mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,9 +20,14 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
             <Grid Grid.Row="0" Padding="16,60,16,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="0" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -50,6 +56,7 @@
                     FontSize="25"
                     ForegroundColor="{StaticResource LightWhite}"
                     HeightRequest="48"
+                    Clicked="OpenCalendar"
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource GradientBlueDark}"
                     HighlightForegroundColor="{StaticResource GradientBlueDark}"
@@ -60,8 +67,7 @@
             <!--  CollectionView of Cards  -->
 
             <CollectionView
-                x:Name="StoreCollectionView"
-                Grid.Row="0"
+                Grid.Row="1"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
                 ItemsSource="{Binding StoreItemCards}">

@@ -10,30 +10,27 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Button
-                Margin="230,10,20,0"
-                BackgroundColor="DarkRed"
-                Clicked="CloseStreaksPage"
-                CornerRadius="25"
-                Text="Close" />
+            <Label
+                Margin="16"
+                LineBreakMode="WordWrap"
+                Style="{StaticResource LargeText}"
+                Text="You've got a 1 day streak!" />
             <Image
+                Margin="0,0,0,0"
                 HorizontalOptions="CenterAndExpand"
-                Source="calendar.png"
+                Source="streaks_calendar.png"
                 VerticalOptions="CenterAndExpand" />
             <flex:FlexButton
                 Margin="20,0,20,20"
-                BackgroundColor="PaleVioletRed"
+                BackgroundColor="#fe4265"
                 ClickedCommand="{Binding AddStreakPoints}"
-                ClickedCommandParameter="1200"
+                ClickedCommandParameter="100"
                 CornerRadius="15"
                 FontSize="23"
-                HeightRequest="170"
-                Text="COLLECT!"
+                ForegroundColor="{StaticResource LightWhite}"
+                HeightRequest="70"
+                Text="COLLECT 100 POINTS!"
                 WidthRequest="400" />
-            <!--
-                ClickedCommand="{Binding Path=BindingContext.AlertPopUp, Source={x:Reference StoreCollectionView}}"
-                ClickedCommandParameter="{Binding .}"
-            -->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

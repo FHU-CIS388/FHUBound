@@ -14,6 +14,11 @@ namespace FHUBound.Views
 
 
         }
+        async void OpenCalendar(object sender, EventArgs e)
+        {
+            var calendar = new CalendarPage();
+            await Navigation.PushModalAsync(calendar);
+        }
 
         //async void OnAlertYesNoClicked(object sender, EventArgs e)
         //{

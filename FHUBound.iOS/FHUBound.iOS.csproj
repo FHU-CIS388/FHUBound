@@ -245,6 +245,9 @@
     <BundleResource Include="Resources\ds.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\calendar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\streaks_calendar.png" />
   </ItemGroup>
 </Project>
