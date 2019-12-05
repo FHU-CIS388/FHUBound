@@ -35,12 +35,13 @@ namespace FHUBound.ViewModels
             {
                 return new Command(async (value) =>
                 {
-                    bool answer = await Application.Current.MainPage.DisplayAlert("Welcome Back!", "DShannon," + Environment.NewLine + Environment.NewLine + "You have a 12 day streak." + Environment.NewLine + Environment.NewLine + "You've earned "+ value +" BoundBucks!" + Environment.NewLine + "", null, "COLLECT NOW!");
+                    int addedPoints = User.Streak * 100;
+                    bool answer = await Application.Current.MainPage.DisplayAlert("Welcome Back, "+ User.FirstName+"!", "You have a "+ User.Streak +" day streak." + Environment.NewLine + Environment.NewLine + "You've earned "+ addedPoints + " BoundBucks!" + Environment.NewLine + "", null, "COLLECT NOW!");
                     if (answer == false)
                     {
-                        if (value != null)
+                        if (addedPoints != null)
                         {
-                            AddBucks.Execute(value);
+                            AddBucks.Execute(addedPoints);
                         }
                         await Navigation.PopModalAsync();
                     }

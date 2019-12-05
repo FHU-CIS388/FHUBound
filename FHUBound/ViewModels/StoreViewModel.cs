@@ -55,9 +55,10 @@ namespace FHUBound.ViewModels
                     int? intValue = card.Value as int?;
                     if (intValue <= User.CurrentPoints)
                     {
-                        bool answer = await App.Current.MainPage.DisplayAlert("Confirm BoundBuck Transaction", "Is your information in order?" + Environment.NewLine + Environment.NewLine + "David Shannon" + Environment.NewLine + Environment.NewLine + "7707 Greene Farm Ct." + Environment.NewLine + "Ypsilanti, MI 48197", "Yes, send my prize!", "Nevermind");
+                        bool answer = await App.Current.MainPage.DisplayAlert("Confirm BoundBuck Transaction", "Is your information correct?" + Environment.NewLine + Environment.NewLine + User.FirstName+" "+User.LastName + Environment.NewLine + Environment.NewLine + User.Address, "Yes, send my prize!", "Nevermind");
                         if (answer == true)
                         {
+                            await App.Current.MainPage.DisplayAlert("Your item is on its way!", null, "OK");
                             RemoveBucks.Execute(c);
                         }
                     }
