@@ -77,7 +77,7 @@
                         <Label
                             FontSize="Title"
                             HorizontalTextAlignment="Center"
-                            Text="12" />
+                            Text="{Binding User.Streak}" />
                         <Label
                             FontSize="Caption"
                             HorizontalTextAlignment="Center"

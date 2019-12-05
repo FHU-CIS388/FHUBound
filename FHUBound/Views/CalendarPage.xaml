@@ -9,7 +9,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label
-                Margin="16"
+                Margin="26"
+                HorizontalTextAlignment="Center"
                 LineBreakMode="WordWrap"
                 Style="{StaticResource LargeText}"
                 Text="You've got a 1 day streak!" />

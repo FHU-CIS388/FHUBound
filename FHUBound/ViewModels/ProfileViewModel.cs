@@ -10,7 +10,7 @@ public class ProfileViewModel : BaseViewModel
     public ProfileViewModel()
     {
         User = App.CurrentUser;
-        Message = "Good Morning, " + User.Username;
+        Message = "Good Morning, " + User.FirstName +"!";
     }
 
 }
