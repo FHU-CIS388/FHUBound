@@ -2,7 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ValueConverters="clr-namespace:MyApp.ValueConverters"
+             xmlns:ValueConverters1="clr-namespace:FHUBound.ValueConverters"
              x:Class="FHUBound.Views.ProfilePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ValueConverters1:BoldConverter x:Key="boldWidget"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <pancake:PancakeView>
             <StackLayout Margin="10">
@@ -48,12 +55,12 @@
                            Style="{StaticResource MediumText}"
                            Margin="5"/>
 
-                    <Label Text="Registered!"
+                    <Label Text="{Binding CurrentUser.MGStatus}"
                            Grid.Row="0"
                            Grid.Column="1"
                            HorizontalOptions="End"
-                           VerticalOptions="Center"
-                           Style="{StaticResource MediumBoldText}"
+                           VerticalOptions="Center"                           
+                           Style="{StaticResource MediumText}"
                            Margin="5"/>
 
                     <Label Text="Campus Tour:"

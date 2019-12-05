@@ -9,16 +9,13 @@ namespace FHUBound
     public partial class App : Application
     {
         public static User CurrentUser { get; set; } 
-
+        public static UserDataStore userDataStore { get; set; }
         public App()
         {
             InitializeComponent();
-            CurrentUser = new User()
-            {
-                Name = "John Doe",
-                ImagePath = "profile.jpg"
+            userDataStore = new UserDataStore();
+            CurrentUser = userDataStore.GetItemAsync("Nemo").Result;
 
-            };
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
