@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FHUBound.Models
+﻿namespace FHUBound.Models
 {
     public class StoreItem
     {

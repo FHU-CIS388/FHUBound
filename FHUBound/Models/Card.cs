@@ -29,7 +29,7 @@ namespace FHUBound.Models
         public string ButtonBackgroundColor { get; set; } = "";
         public string ButtonForegroundColor { get; set; } = "";
 
-        public DateTime StartDateTime { get; set; } 
+        public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
 
         public int Value { get; set; }

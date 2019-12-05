@@ -70,7 +70,6 @@
                 Grid.Row="1"
                 Margin="{OnPlatform Android='0',
                                     iOS='0,0,0,80'}"
-                x:Name="StoreCollectionView"
                 ItemsSource="{Binding StoreItemCards}">
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">

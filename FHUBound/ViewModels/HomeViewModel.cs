@@ -1,5 +1,6 @@
 ﻿using FHUBound.Models;
 using FHUBound.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -26,7 +27,6 @@ namespace FHUBound.ViewModels
             {
                 return new Command((c) =>
                 {
-
                     var card = c as Card;
                     card.PointsButtonBool = false;
 

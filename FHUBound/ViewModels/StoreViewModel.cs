@@ -3,9 +3,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
-using System.Collections.Generic;
-using System.Diagnostics;
-using FHUBound.ViewModels;
 
 namespace FHUBound.ViewModels
 {
@@ -62,13 +59,13 @@ namespace FHUBound.ViewModels
                         if (answer == true)
                         {
                             RemoveBucks.Execute(c);
-                        }  
+                        }
                     }
                     else
                     {
                         bool alertNoteEnoughBucks = await App.Current.MainPage.DisplayAlert("Sorry!", "You don't have enough BoundBucks to redeem this item. :(", null, "Okay, Got it!");
                     }
-                    
+
                 });
             }
         }

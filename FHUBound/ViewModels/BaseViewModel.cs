@@ -1,12 +1,10 @@
-﻿using System;
+﻿using FHUBound.Models;
+using FHUBound.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
-using FHUBound.Models;
-using FHUBound.Services;
 
 namespace FHUBound.ViewModels
 {

@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using FHUBound.Models;
 
 namespace FHUBound.ViewModels
