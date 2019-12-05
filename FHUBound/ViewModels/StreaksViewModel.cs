@@ -21,8 +21,10 @@ namespace FHUBound.ViewModels
             {
                 return new Command((c) =>
                 {
-                    int? intValue = (int)c;
-                    User.CurrentPoints += (int)intValue;
+                    var numberString = c.ToString();
+                    int numberInt = Int32.Parse(numberString);
+                    Console.WriteLine("int!: "+ numberInt);
+                    User.CurrentPoints += numberInt;
                 });
             }
         }
@@ -33,12 +35,13 @@ namespace FHUBound.ViewModels
             {
                 return new Command(async (value) =>
                 {
-                    bool answer = await Application.Current.MainPage.DisplayAlert("Welcome Back!", "DShannon," + Environment.NewLine + Environment.NewLine + "You have a 12 day streak." + Environment.NewLine + Environment.NewLine + "You've earned 1200 BoundBucks!" + Environment.NewLine + "", null, "COLLECT NOW!");
-                    Console.WriteLine("BOOL IS: " + answer);
+                    bool answer = await Application.Current.MainPage.DisplayAlert("Welcome Back!", "DShannon," + Environment.NewLine + Environment.NewLine + "You have a 12 day streak." + Environment.NewLine + Environment.NewLine + "You've earned "+ value +" BoundBucks!" + Environment.NewLine + "", null, "COLLECT NOW!");
                     if (answer == false)
                     {
-                        int? intValue = value as int?;
-                        AddBucks.Execute(1200);
+                        if (value != null)
+                        {
+                            AddBucks.Execute(value);
+                        }
                         await Navigation.PopModalAsync();
                     }
                 });

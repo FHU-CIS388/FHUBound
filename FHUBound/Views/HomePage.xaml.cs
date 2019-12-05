@@ -22,8 +22,6 @@ namespace FHUBound.Views
             var streaks = new StreaksPage();
             await Navigation.PushModalAsync(streaks);
         }
-
-        //TODO: test for button, but button wouldnt click
         async void OpenCalendar(object sender, EventArgs e)
         {
             var calendar = new CalendarPage();
