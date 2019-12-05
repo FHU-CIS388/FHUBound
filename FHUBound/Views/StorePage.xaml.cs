@@ -4,6 +4,7 @@ using FHUBound.ViewModels;
 using FHUBound.Models;
 using Xamarin.Forms;
 
+
 namespace FHUBound.Views
 {
     
@@ -15,6 +16,8 @@ namespace FHUBound.Views
             string action = await DisplayActionSheet("Confirm?",  "No", "Yes");
             Console.WriteLine("Action: " + action);
         }
+        
+        
 
          
         public StorePage()

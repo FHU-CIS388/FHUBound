@@ -137,7 +137,36 @@
                     <DataTemplate>
                         <Frame BorderColor="{StaticResource FHUMaroon}"
                                CornerRadius="10">
-                            <Label Text="{Binding Name}"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" 
+                                   TextColor="{StaticResource FHUMaroon}"
+                                   FontSize="Title"
+                                   HorizontalTextAlignment="Center"/>
+                                <ImageButton Source="{Binding ImageURL}" HorizontalOptions="Center"  />
+                                <flex:FlexButton
+                    
+                    
+                    HeightRequest="48"
+                    BackgroundColor="{StaticResource Maroon}"
+                    BorderColor="{StaticResource LightWhite}"
+                    BorderThickness="1"
+                    TouchedUp="OnDisplayActionSheetButtonClicked"
+                    HighlightBackgroundColor="{StaticResource LightWhite}"
+                    HighlightBorderColor="{StaticResource Maroon}"
+                    HighlightForegroundColor="{StaticResource Maroon}"
+
+                    CornerRadius="16"
+                    FontFamily="{StaticResource BoldFont}"
+                    FontSize="25"
+                    ForegroundColor="{StaticResource LightWhite}"
+
+                    Text="{Binding Price, StringFormat='{0} BB'}"  
+                   
+                    VerticalOptions="Start"
+                    />
+                            </StackLayout>
+                            
+                                   
 
 
 
