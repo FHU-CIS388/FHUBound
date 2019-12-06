@@ -142,7 +142,7 @@
                                    TextColor="{StaticResource FHUMaroon}"
                                    FontSize="Title"
                                    HorizontalTextAlignment="Center"/>
-                                <ImageButton Source="{Binding ImageURL}" HorizontalOptions="Center"  Command="{Binding ButtonClicked}" />
+                                <ImageButton Source="{Binding ImageURL}" HorizontalOptions="Center"  />
                                 <flex:FlexButton
                     
                     

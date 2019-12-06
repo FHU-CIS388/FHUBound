@@ -17,17 +17,18 @@ namespace FHUBound.Views
             Console.WriteLine("Action: " + action);
         }
         
-     
+        
 
          
         public StorePage()
         {
          
             InitializeComponent();
+
            viewModel = new StoreViewModel();
            BindingContext = viewModel;
-           
         }
+<<<<<<< HEAD
 
         public Command ButtonClicked = new Command((object item) =>
         {
@@ -39,12 +40,17 @@ namespace FHUBound.Views
         });
 
 
+=======
+>>>>>>> 82cbf6880505a22d0c306d0b70bfb9f04c69a012
         protected override void OnAppearing()
         {
             base.OnAppearing();
             if (viewModel.StoreItems.Count == 0) viewModel.LoadItemsCommand.Execute(null);
         }
 
-      
+        private async System.Threading.Tasks.Task ImageButton_ClickedAsync(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
