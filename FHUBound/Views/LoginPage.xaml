@@ -4,14 +4,23 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="FHUBound.Views.LoginPage">
-    
+             x:Class="FHUBound.Views.LoginPage">   
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Welcome to FHU Bound!"
+                   Style="{StaticResource HeaderTitle}"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="username"
+                   Placeholder="username"/>
+            <Entry x:Name="fullname"
+                   Placeholder="Full name" />
+            <DatePicker MinimumDate="01/01/1990"
+                        MaximumDate="01/01/2020"
+                        Date="11/30/2019"
+                        x:Name="birthday"/>
             <Button Text="Log In"
+                    VerticalOptions="End"
                     Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

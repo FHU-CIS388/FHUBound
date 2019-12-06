@@ -33,5 +33,10 @@ namespace FHUBound.Views
             base.OnAppearing();
             if (viewModel.StoreItems.Count == 0) viewModel.LoadItemsCommand.Execute(null);
         }
+
+        private async System.Threading.Tasks.Task ImageButton_ClickedAsync(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
