@@ -8,11 +8,17 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <Button Clicked="CloseCalendarPage" Text="Close" />
+            <Label
+                Margin="26"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Style="{StaticResource LargeText}"
+                Text="You've got a 1 day streak!" />
             <Image
                 HorizontalOptions="CenterAndExpand"
-                Source="calendar.png"
+                Source="streaks_calendar.png"
                 VerticalOptions="CenterAndExpand" />
+            <Button Clicked="CloseCalendarPage" Text="Close" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

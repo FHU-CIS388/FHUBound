@@ -1,24 +1,24 @@
-﻿using FHUBound.Models;
-using FHUBound.ViewModels;
+﻿using FHUBound.ViewModels;
 using System;
-using System.Windows.Input;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace FHUBound.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StreaksPage : ContentPage
     {
-        StreakViewModel viewModel;
-
+        StreaksViewModel viewModel;
         public StreaksPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new StreakViewModel();
-        }
-        async void CloseStreaksPage(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
-        }
-        
+            BindingContext = viewModel = new StreaksViewModel();
+            viewModel.Navigation = Navigation;
+        }     
     }
 }

@@ -5950,19 +5950,22 @@ namespace FHUBound.Droid
 			public const int stickers = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int tab_about = 2131165354;
+			public const int streaks_calendar = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int tab_feed = 2131165355;
+			public const int tab_about = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int tooltip_frame_dark = 2131165356;
+			public const int tab_feed = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int tooltip_frame_light = 2131165357;
+			public const int tooltip_frame_dark = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int xamarin_logo = 2131165358;
+			public const int tooltip_frame_light = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int xamarin_logo = 2131165359;
 			
 			static Drawable()
 			{
