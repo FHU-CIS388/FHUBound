@@ -93,11 +93,13 @@
                     </StackLayout>
 
                 </Grid>
-                <StackLayout Grid.Row="4">
-                    <ProgressBar
-                        Progress=".7"
-                        TranslationY="-60"
-                        WidthRequest="20" />
+                <StackLayout Grid.Row="4" Margin="10,0,10,0">
+                    <Label FontSize="Body" Text="Address: " />
+                    <Entry
+                        x:Name="addressEntry"
+                        Margin="10,0,10,0"
+                        Placeholder="type here"
+                        Text="{Binding Address}" />
                 </StackLayout>
 
             </Grid>

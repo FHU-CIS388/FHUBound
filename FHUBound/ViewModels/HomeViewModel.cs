@@ -2,13 +2,16 @@
 using FHUBound.Views;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace FHUBound.ViewModels
 {
-    public class HomeViewModel : BaseViewModel
+    public class HomeViewModel : BaseViewModel, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public User User { get; set; }
         public ObservableCollection<Card> Cards { get; set; }
         public HomeViewModel()
