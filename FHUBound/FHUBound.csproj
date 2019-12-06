@@ -22,9 +22,6 @@
     <None Remove=".DS_Store" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Views\DescriptionPopUp.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

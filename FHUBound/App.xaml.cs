@@ -16,9 +16,9 @@ namespace FHUBound
         {
             InitializeComponent();
             userDataStore = new UserDataStore();
-
-            var isLogged = SecureStorage.GetAsync("isLogged").Result;
-            if(isLogged == "1")
+            string temp = "blank";
+            Preferences.Set("current_user_id", temp);
+            if (IsLoggedIn())
             {
                 MainPage = new AppShell();
             }
@@ -26,8 +26,7 @@ namespace FHUBound
             {
                 MainPage = new LoginPage();
             }
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            DependencyService.Register<MockDataStore>();            
         }
 
         protected override void OnStart()
@@ -43,6 +42,20 @@ namespace FHUBound
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        private bool IsLoggedIn()
+        {
+            string value = Preferences.Get("current_user_id", "default_value");
+            try
+            {
+                CurrentUser = userDataStore.GetItemAsync(value).Result;
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            return (CurrentUser != null);
         }
     }
 }
