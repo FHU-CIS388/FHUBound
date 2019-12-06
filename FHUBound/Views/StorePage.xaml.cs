@@ -17,21 +17,33 @@ namespace FHUBound.Views
             Console.WriteLine("Action: " + action);
         }
         
-        
+     
 
          
         public StorePage()
         {
          
             InitializeComponent();
-
            viewModel = new StoreViewModel();
            BindingContext = viewModel;
+           
         }
+        public Command ButtonClicked = new Command((object item) =>
+        {
+            StoreItem model = item as StoreItem;
+            
+            App.Current.MainPage.DisplayAlert("",model.Description,"");
+            
+            
+        });
+
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
             if (viewModel.StoreItems.Count == 0) viewModel.LoadItemsCommand.Execute(null);
         }
+
+      
     }
 }
