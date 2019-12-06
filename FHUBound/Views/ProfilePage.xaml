@@ -94,11 +94,10 @@
 
                 </Grid>
                 <StackLayout Grid.Row="4" Margin="10,0,10,50">
-                    <Label FontSize="30" Text="Address: " />
+                    <Label FontSize="Large" Text="Address: " />
                     <Entry
                         Margin="10,0,10,0"
-                        FontSize="Large"
-                        Placeholder="type here"
+                        FontSize="Medium"
                         Text="{Binding User.Address}" />
                 </StackLayout>
 

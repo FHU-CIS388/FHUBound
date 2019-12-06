@@ -14,18 +14,16 @@ public class ProfileViewModel : BaseViewModel, INotifyPropertyChanged
         Message = "Good Morning, " + User.FirstName +"!";
         User.Address = Address;
     }
-
-    private string address = string.Empty;
     public string Address
     {
         get
-        { return address; }
+        { return User.Address; }
         set
         {
-            if (address == value)
+            if (User.Address == value)
                 return;
 
-            address = value;
+            User.Address = value;
             OnPropertyChanged(nameof(Address));
         }
     }
