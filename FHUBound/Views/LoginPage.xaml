@@ -8,12 +8,16 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to FHU Bound!"
+                   TextColor="{StaticResource FHUMaroon}"
                    Style="{StaticResource HeaderTitle}"
+                   FontAttributes="Bold"
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="username"
-                   Placeholder="username"/>
+                   Placeholder="Username"
+                   />
             <Entry x:Name="password"
+                   Placeholder="Password"
                    IsPassword="True"/>
 
             <Entry x:Name="fullname"
@@ -29,6 +33,8 @@
                         x:Name="birthday"/>
             <Button Text="Log In"
                     VerticalOptions="End"
+                    BackgroundColor="{StaticResource FHUMaroon}"
+                    TextColor="White"
                     Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
