@@ -28,6 +28,7 @@ namespace FHUBound.Views
            BindingContext = viewModel;
            
         }
+
         public Command ButtonClicked = new Command((object item) =>
         {
             StoreItem model = item as StoreItem;
