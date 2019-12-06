@@ -64,22 +64,22 @@
 
                     <StackLayout Grid.Column="0" Orientation="Vertical">
                         <Label
-                            FontSize="Title"
+                            FontSize="30"
                             HorizontalTextAlignment="Center"
                             Text="{Binding User.CurrentPoints}" />
                         <Label
-                            FontSize="Caption"
+                            FontSize="Body"
                             HorizontalTextAlignment="Center"
                             Text="BoundBucks" />
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" Orientation="Vertical">
                         <Label
-                            FontSize="Title"
+                            FontSize="30"
                             HorizontalTextAlignment="Center"
                             Text="{Binding User.Streak}" />
                         <Label
-                            FontSize="Caption"
+                            FontSize="Body"
                             HorizontalTextAlignment="Center"
                             Text="Streak Days" />
                     </StackLayout>
@@ -87,19 +87,19 @@
                     <StackLayout Grid.Column="2" Orientation="Vertical">
                         <Image Source="Setting.png" />
                         <Label
-                            FontSize="Caption"
+                            FontSize="Body"
                             HorizontalTextAlignment="Center"
                             Text="Profile Settings" />
                     </StackLayout>
 
                 </Grid>
-                <StackLayout Grid.Row="4" Margin="10,0,10,0">
-                    <Label FontSize="Body" Text="Address: " />
+                <StackLayout Grid.Row="4" Margin="10,0,10,50">
+                    <Label FontSize="30" Text="Address: " />
                     <Entry
-                        x:Name="addressEntry"
                         Margin="10,0,10,0"
+                        FontSize="Large"
                         Placeholder="type here"
-                        Text="{Binding Address}" />
+                        Text="{Binding User.Address}" />
                 </StackLayout>
 
             </Grid>
