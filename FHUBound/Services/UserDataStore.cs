@@ -14,9 +14,9 @@ namespace FHUBound.Services
         {
             users = new List<User>()
             {
-                new User { ID = 1, Name = "John Hopkins", Password = "pirate01"},
-                new User { ID = 2, Name = "Amy Dashford", Password = "jonaslover14"},
-                new User { ID = 3, Name = "Nemo", ImagePath = "profile.jpg", AdvRegistered = true, MGRegistered = true}
+                new User { Id = "1", Name = "John Hopkins", Password = "pirate01"},
+                new User { Id = "2", Name = "Amy Dashford", Password = "jonaslover14"},
+                new User { Id = "3", Name = "Nemo", ImagePath = "profile.jpg", AdvRegistered = true, MGRegistered = true      }
             };
         }
         public async Task<bool> AddItemAsync(User _user)
@@ -36,7 +36,7 @@ namespace FHUBound.Services
 
         public async Task<User> GetItemAsync(string id)
         {
-            return await Task.FromResult(users.FirstOrDefault(s => s.Name == id));
+            return await Task.FromResult(users.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<IEnumerable<User>> GetItemsAsync(bool forceRefresh = false)
