@@ -40,6 +40,13 @@ namespace FHUBound.Models
             set { SetProperty(ref playAnimation, value); }
         }
 
+        private bool playFireAnimation = false;
+        public bool PlayFireAnimation
+        {
+            get { return playFireAnimation; }
+            set { SetProperty(ref playFireAnimation, value); }
+        }
+
 
 
         public int firstLevel { get; set; }

@@ -1,42 +1,71 @@
-﻿using System;
+﻿using FHUBound.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace FHUBound.Models
 {
-    public class User
+    public class User : BaseViewModel
     {
-        public string Username { get; set; }
+        private string userName;
+        public string Username
+        {
+            get { return userName; }
+            set { SetProperty(ref userName, value); }
+        }
 
-        public string FirstName { get; set; }
+        private string firstName;
+        public string FirstName
+        {
+            get { return firstName; }
+            set { SetProperty(ref firstName, value); }
+        }
 
-        public string LastName { get; set; }
+        private string lastName;
+        public string LastName
+        {
+            get { return LastName; }
+            set { SetProperty(ref lastName, value); }
+        }
 
-        public int TotalPoints { get; set; }
 
-        public int Points { get; set; }
+        private int totalPoints;
+        public int TotalPoints
+        {
+            get { return totalPoints; }
+            set { SetProperty(ref totalPoints, value); }
+        }
 
-        public int Level { get; set; }
+
+
+        private int points;
+        public int Points
+        {
+            get { return points; }
+            set { SetProperty(ref points, value); }
+        }
+
+        private int level;
+        public int Level
+        {
+            get { return level; }
+            set { SetProperty(ref level, value); }
+        }
+
 
         public void CalculateLevel ()
         {
+            int[] levels = new int[7] { 100, 200, 300, 400, 500, 600, 700 };
 
-            if (App.CurrentUser.TotalPoints >= 100 && App.CurrentUser.TotalPoints <200)
+            if (App.CurrentUser.points == 0 || App.CurrentUser.points < 100)
             {
-                App.CurrentUser.Level = 1;
+                App.CurrentUser.level = 0;
             }
-            else if (App.CurrentUser.TotalPoints >= 200 && App.CurrentUser.TotalPoints < 300)
+            else
             {
-                App.CurrentUser.Level = 2;
+                App.CurrentUser.Level = App.CurrentUser.points / 100;
             }
-            else if (App.CurrentUser.TotalPoints >= 300 && App.CurrentUser.TotalPoints < 400)
-            {
-                App.CurrentUser.Level = 3;
-            }
-            else if (App.CurrentUser.TotalPoints >= 400)
-            {
-                App.CurrentUser.Level = 4;
-            }
+           
         }
 
 

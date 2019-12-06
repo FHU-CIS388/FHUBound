@@ -1,5 +1,45 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.VisitPage">
     <ContentPage.Content>
+
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button
+                Grid.Row="0"
+            Text="clear level"
+            x:Name="ClearlevelButton"
+            Clicked="ClearlevelButton_Clicked"
+            >
+            
+        </Button>
+
+            <Entry Text="change Username"
+                   x:Name="changeUsernameEntry"
+                   Grid.Row="1"
+                   >
+                
+            </Entry>
+            <Button
+                Text="save"
+                Grid.Row="2"
+                x:Name="saveChangeButton"
+                Clicked="saveChangeButton_Clicked"
+                ></Button>
+
+
+
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

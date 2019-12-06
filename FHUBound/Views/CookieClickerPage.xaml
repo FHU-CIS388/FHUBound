@@ -10,35 +10,37 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
 
+
+            <BoxView
+                BackgroundColor="#33343c"
+                Grid.RowSpan="6"
+                >
+                
+                
+            </BoxView>
+            
+
             <Label
                 Text="{Binding CookieGame.Clicks}"
                 HorizontalOptions="Center"
                 Grid.Row="0"
+                TextColor="White"
                 FontSize="30"
                 
                 ></Label>
 
-            <ImageButton
-                Source="ShannonStickerNBG.png"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="{Binding CookieGame.ButtonHeight}"
-                WidthRequest="{Binding CookieGame.ButtonWidth}"
-                Grid.Row="1"
-                BackgroundColor="Transparent"
-                x:Name="stacheButton"
-                Command="{Binding IncrementClickCommand}"
-                ></ImageButton>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
 
-            <forms:AnimationView 
-                         x:Name="FireAnimation"
-                         Animation="heart.json"
+
+                <forms:AnimationView 
+                         x:Name="CookieAnimation"
+                         Animation="cookie.json"
                          Loop="False"
                          AutoPlay="False"
                          
@@ -47,23 +49,69 @@
                                  WidthRequest="100"
                          VerticalOptions="FillAndExpand"
                          HorizontalOptions="FillAndExpand"
-                        Grid.Row="2"
+                         
+                        Grid.Row="1"
                 />
 
+                <Label
+                    Text="+10 points!"
+                    TextColor="#d8ad6a"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    IsVisible="{Binding CookieGame.PlayAnimation}"
+                    ></Label>
 
-            <forms:AnimationView 
+
+            </StackLayout>
+
+            
+
+            <ImageButton
+                Source="ShannonStickerNBG.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="{Binding CookieGame.ButtonHeight}"
+                WidthRequest="{Binding CookieGame.ButtonWidth}"
+                Grid.Row="2"
+                BackgroundColor="Transparent"
+                x:Name="stacheButton"
+                Command="{Binding IncrementClickCommand}"
+                ></ImageButton>
+
+
+            <StackLayout Grid.Row="3"  HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Label
+                    Text="You're on fire!"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="OrangeRed"
+                    FontSize="30"
+                    IsVisible="{Binding CookieGame.PlayFireAnimation}"
+                    Grid.Row="3"
+                    ></Label>
+                
+                
+                <forms:AnimationView 
                          x:Name="AnimationView"
                          Animation="fire.json"
                          Loop="False"
                          AutoPlay="False"
                          
-                         IsVisible="{Binding CookieGame.PlayAnimation}"
+                         IsVisible="{Binding CookieGame.PlayFireAnimation}"
                                  HeightRequest="100"
                                  WidthRequest="100"
                          VerticalOptions="FillAndExpand"
                          HorizontalOptions="FillAndExpand" 
                     Grid.Row="3"            
                 />
+                
+                
+                
+            </StackLayout>
+
             
 
 

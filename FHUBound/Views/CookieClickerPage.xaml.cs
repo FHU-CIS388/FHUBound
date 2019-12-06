@@ -19,7 +19,7 @@ namespace FHUBound.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new CookieViewModel(stacheButton, AnimationView, FireAnimation);
+            BindingContext = viewModel = new CookieViewModel(stacheButton, AnimationView, CookieAnimation);
         }
 
         private void stacheButton_Clicked(object sender, EventArgs e)

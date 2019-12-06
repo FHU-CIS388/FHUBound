@@ -6,16 +6,20 @@
             
     <ContentPage.Content>
         <ScrollView>
-            <Grid>
+            <Grid Grid.RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto" ></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
+                    
+                    
                 </Grid.RowDefinitions>
 
+                
+                
                 <BoxView
                     Grid.Row="0"
                   
@@ -23,8 +27,9 @@
                     VerticalOptions="Fill"
                     WidthRequest="300"
                     HeightRequest="200"
-                    Color="#8d8d8d"
+                    Color="black"
                     ></BoxView>
+                
                 
                 
                    
@@ -35,11 +40,11 @@
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
                     <controls:CircleImage 
-                        Source="second.jpg" 
-                        WidthRequest="160" 
-                        HeightRequest="250" 
+                        Source="Jack_Headshot_Square.jpg" 
+                        WidthRequest="120" 
+                        HeightRequest="240" 
                         Grid.Row="0" 
-                        Scale="1.5"
+                        Scale="2.25"
                         HorizontalOptions="Center" 
                         VerticalOptions="Center"
                         
@@ -47,67 +52,156 @@
                         ></controls:CircleImage>
                 </StackLayout>
 
+
+
+
+                <BoxView
+                    Grid.Row="1"
+                    WidthRequest ="60"
+                    HeightRequest="60"
+                
+                    BackgroundColor="Black"
+                   >
+
+                </BoxView>
+                <BoxView
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    WidthRequest="260"
+                    BackgroundColor="Maroon"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    ></BoxView>
+
+
+                
+               
+
+               
                 <Label
                     Text="{Binding User.Username}"
                     Grid.Row="1"
-                    
+                    TextColor="White"
                     HorizontalOptions="Center"
                     FontSize="40"
           
                     >
-                    
-                    
+
+
                 </Label>
 
-                <Label
-                    Text="{Binding User.Points}"
+                <BoxView
+                    Grid.Row="2"
+                    BackgroundColor="black"
+                    WidthRequest="400"
+                    HeightRequest="50"
+                    
+                    >
+
+                </BoxView>
+
+                <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" >
+
+                    <Label
+                        
+                        FontSize="30"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Text="Points: "
+                        ></Label>
+                    
+                    <Label
+                    Text= "{Binding User.Points}"
                     FontSize="30"
+                    TextColor="White"
                     HorizontalOptions="Center"
                     Grid.Row="2" 
                    
                     
                     
                   ></Label>
-                <Label
-                    Text="{Binding User.TotalPoints}"
-                    FontSize="30"
-                    HorizontalOptions="Center"
+                    
+                    
+                </StackLayout>
+               
+
+                <BoxView
                     Grid.Row="3"
-                    
+                    BackgroundColor="black"
+                    WidthRequest="400"
+                    HeightRequest="50"
                     
                     >
-                    
-                </Label>
 
-                <ProgressBar
-                    Progress="0.75"
-                    ProgressColor="Maroon"
-                    Grid.Row="4"
+                </BoxView>
+
+
+                <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" >
+
+                    <Label
+                        
+                        FontSize="30"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Text="TotalPoints: "
+                        ></Label>
+
+                    <Label
+                    Text= "{Binding User.TotalPoints}"
+                    FontSize="30"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Grid.Row="3" 
                    
-                    Margin="15"
-                    HeightRequest="40"
                     
-                    ></ProgressBar>
-                <Label
-                    Text="Progress until next level"
-                    HorizontalOptions="Center"
-                    FontSize="30"
-                    Grid.Row="5"
                     
-                    ></Label>
+                  ></Label>
 
-                <Label
-                    Text="{Binding User.Level}"
-                    HorizontalOptions="Center"
-                    FontSize="30"
-                    Grid.Row="6"
-                    >
+
+                </StackLayout>
+
+
+                <BoxView
+                    Grid.Row="4"
+                    BackgroundColor="black"
+                    WidthRequest="400"
+                    HeightRequest="50"
                     
-      
-                </Label>
+                    >
+
+                </BoxView>
+
+                <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" >
+
+                    <Label
+                        
+                        FontSize="30"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Text="level: "
+                        ></Label>
+
+                    <Label
+                    Text= "{Binding User.Level}"
+                    FontSize="30"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Grid.Row="4" 
+                   
+                    
+                    
+                  ></Label>
+
+
+                </StackLayout>
+
+
+
+
 
                 <Button
-                    Grid.Row="7"
+                    Grid.Row="5"
                     Text="Edit"
                     WidthRequest="20"
                     x:Name="editButton"
@@ -115,6 +209,7 @@
                     
                     
                     ></Button>
+               
                 
                 
                 

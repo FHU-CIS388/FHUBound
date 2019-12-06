@@ -8,51 +8,80 @@
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
                 </Grid.RowDefinitions>
+
+                <BoxView
+                    BackgroundColor="#DCDCDC"
+                    Grid.RowSpan="7">
+                    
+                </BoxView>
+                
                 <StackLayout Grid.Row="0">
-                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Image Source="icons8_jacket_100.png"
+                           HeightRequest="100"
+                           ></Image>
                         <Button
-                       x:Name="firstButton"
+                       x:Name="jacketButton"
                        Clicked="testButton_Clicked"
-                        Text="buy"
+                        Text="1000 pts"
+                            TextColor="White"
+                            BackgroundColor="#808080"
                         ></Button>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
-                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Image Source="icons8_t_shirt_100.png"
+                           HeightRequest="100"
+                           ></Image>
                     <Button
-                       x:Name="secondButton"
-                       Clicked="testButton_Clicked"
-                        Text="buy"
+                       x:Name="shirtButton"
+                       Clicked="shirtButton_Clicked"
+                        Text="850 pts"
+                         TextColor="White"
+                            BackgroundColor="#808080"
                         ></Button>
                 </StackLayout>
                 <StackLayout Grid.Row="2">
-                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Image Source="icons8_cap_64.png"
+                           HeightRequest="100"
+                           ></Image>
                     <Button
-                       x:Name="thirdButton"
-                       Clicked="testButton_Clicked"
-                        Text="buy"
+                       x:Name="capButton"
+                       Clicked="capButton_Clicked"
+                        Text="500 pts"
+                        TextColor="White"
+                            BackgroundColor="#808080"
+                     
+                        
                         ></Button>
                 </StackLayout>
                 <StackLayout Grid.Row="3">
-                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Image Source="icons8_book_200.png"
+                           HeightRequest="100"
+                           ></Image>
                     <Button
-                       x:Name="fourthButton"
-                       Clicked="testButton_Clicked"
-                        Text="buy"
+                       x:Name="bookButton"
+                       Clicked="bookButton_Clicked"
+                        Text="50 pts"
+                        TextColor="White"
+                            BackgroundColor="#808080"
                         ></Button>
                 </StackLayout>
                 <StackLayout Grid.Row="4">
-                    <Image Source="icons8_t_shirt_100.png"></Image>
+                    <Image Source="icons8_gift_64.png"
+                           HeightRequest="100"
+                           ></Image>
                     <Button
-                       x:Name="fifthButton"
-                       Clicked="testButton_Clicked"
-                        Text="buy"
+                       x:Name="giftButton"
+                       Clicked="giftButton_Clicked"
+                        Text="5000 pts"
+                        TextColor="White"
+                            BackgroundColor="#808080"
                         ></Button>
                 </StackLayout>
 

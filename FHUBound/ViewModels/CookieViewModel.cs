@@ -15,20 +15,22 @@ namespace FHUBound.ViewModels
         public ImageButton ImageButton { get; set; }
         public AnimationView AnimationView { get; set; }
 
-        public AnimationView FireAnimation { get; set; }
+        public AnimationView CookieAnimation { get; set; }
 
-        public CookieViewModel(ImageButton imageButton, AnimationView animationView, AnimationView fireAnimation)
+        public CookieViewModel(ImageButton imageButton, AnimationView animationView, AnimationView cookieAnimation)
         {
             CookieGame = new CookieGame();
             ImageButton = imageButton;
             CookieGame.ButtonWidth = 300;
             CookieGame.ButtonHeight = 300;
             AnimationView = animationView;
-            FireAnimation = fireAnimation;
+            CookieAnimation = cookieAnimation;
 
             IncrementClickCommand = new Command(IncrementClick);
 
-            AnimationView.OnFinish += AnimationView_OnFinish;
+            AnimationView.OnFinish += FireAnimationView_OnFinish;
+            CookieAnimation.OnFinish += AnimationView_OnFinish;
+
         }
 
         private void AnimationView_OnFinish(object sender, EventArgs e)
@@ -36,6 +38,13 @@ namespace FHUBound.ViewModels
             
             CookieGame.PlayAnimation = false;
         }
+
+        private void FireAnimationView_OnFinish(object sender, EventArgs e)
+        {
+
+            CookieGame.PlayFireAnimation = false;
+        }
+
 
         public ICommand IncrementClickCommand { get; }
 
@@ -50,14 +59,27 @@ namespace FHUBound.ViewModels
             await ImageButton.ScaleTo(1.05, 100, Easing.BounceIn);
             await ImageButton.ScaleTo(1, 100, Easing.BounceOut);
 
-            if (CookieGame.Clicks % 5 == 0)
+            if (CookieGame.Clicks % 25 == 0)
             {
+                App.CurrentUser.Points += 10;
+                App.CurrentUser.TotalPoints += 10;
+                App.CurrentUser.CalculateLevel();
+
                 CookieGame.PlayAnimation = true;
-                AnimationView.Play();
-                FireAnimation.Play();
+                CookieAnimation.Play();
+                
                 //CookieGame.PlayAnimation = false;
                 
             }
+
+            if (CookieGame.Clicks % 100 == 0)
+            {
+                CookieGame.PlayFireAnimation = true;
+
+                AnimationView.Play();
+            }
+
+
             
 
            

@@ -21,7 +21,12 @@ namespace FHUBound.Views
 
         private async void editButton_Clicked(object sender, EventArgs e)
         {
+            App.CurrentUser.Username = "whoops";
             await Navigation.PushAsync(new EditProfilePage());
         }
+
+       
+
+        
     }
 }
