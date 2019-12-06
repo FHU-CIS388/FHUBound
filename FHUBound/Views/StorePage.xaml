@@ -143,7 +143,6 @@
                                    FontSize="Title"
                                    HorizontalTextAlignment="Center"/>
                                 <ImageButton Source="{Binding ImageURL}" HorizontalOptions="Center"  Command="{Binding ButtonClicked}" />
-                                
                                 <flex:FlexButton
                     
                     
