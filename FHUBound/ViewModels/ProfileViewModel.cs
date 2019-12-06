@@ -12,6 +12,7 @@ public class ProfileViewModel : BaseViewModel, INotifyPropertyChanged
     {
         User = App.CurrentUser;
         Message = "Good Morning, " + User.FirstName +"!";
+        User.Address = Address;
     }
 
     private string address = string.Empty;
