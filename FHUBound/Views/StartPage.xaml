@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             mc:Ignorable="d"
+             x:Class="FHUBound.Views.StartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create Your Account"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Firstname"/>
+            <Entry Placeholder="Lastname"/>
+            <Entry Placeholder="Email"/>
+            <Entry Placeholder="Username"/>
+            <Entry Placeholder="Password"/>
+            <flex:FlexButton
+                Margin="0,0,0,20"        
+                Padding="0"          
+                WidthRequest="300"        
+                HeightRequest="50"   
+                BackgroundColor="{StaticResource FHUMaroon}"       
+                BorderColor="{StaticResource LightWhite}"        
+                BorderThickness="1"         
+                CornerRadius="25"           
+                FontFamily="{StaticResource BoldFont}"         
+                FontSize="20"      
+                ForegroundColor="{StaticResource LightWhite}"    
+                HighlightBackgroundColor="{StaticResource LightWhite}" 
+                HighlightBorderColor="{StaticResource FHUMaroon}"    
+                HighlightForegroundColor="{StaticResource FHUMaroon}"
+                Clicked="OnButtonClicked"     
+                Text="Create Account"             
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

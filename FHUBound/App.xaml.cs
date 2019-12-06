@@ -12,9 +12,9 @@ namespace FHUBound
         public App()
         {
             InitializeComponent();
-
+            MainPage = new NavigationPage(new StartPage());
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            
         }
 
         protected override void OnStart()
