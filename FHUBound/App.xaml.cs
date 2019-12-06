@@ -4,6 +4,8 @@ using Xamarin.Forms.Xaml;
 using FHUBound.Services;
 using FHUBound.Views;
 using FHUBound.Models;
+using Xamarin.Essentials;
+
 namespace FHUBound
 {
     public partial class App : Application
@@ -14,8 +16,16 @@ namespace FHUBound
         {
             InitializeComponent();
             userDataStore = new UserDataStore();
-            CurrentUser = userDataStore.GetItemAsync("Nemo").Result;
 
+            var isLogged = SecureStorage.GetAsync("isLogged").Result;
+            if(isLogged == "1")
+            {
+                MainPage = new AppShell();
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
