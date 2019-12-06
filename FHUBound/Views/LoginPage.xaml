@@ -13,8 +13,16 @@
                    HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="username"
                    Placeholder="username"/>
+            <Entry x:Name="password"
+                   IsPassword="True"/>
+
             <Entry x:Name="fullname"
                    Placeholder="Full name" />
+            <Entry x:Name="address"
+                   Placeholder="Mailing Address" />
+            <Entry x:Name="bio"
+                   Placeholder="Tell us something about yourself!"
+                   MaxLength="1000"/>
             <DatePicker MinimumDate="01/01/1990"
                         MaximumDate="01/01/2020"
                         Date="11/30/2019"
