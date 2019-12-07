@@ -9,7 +9,10 @@
     Title="Store">
     <ContentPage.Content >
         <StackLayout Spacing="10" x:Name="StoreStackLayout">
-            <CollectionView x:Name="StoreCollectionView">
+            <CollectionView x:Name="StoreCollectionView"
+                            Grid.Row="0"
+                            Margin="{OnPlatform Android='0', iOS='0,0,0,80'}"
+                            ItemsSource="{Binding StoreItems}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
@@ -41,6 +44,8 @@
                                 HighlightBorderColor="{StaticResource FHUMaroon}"
                                 HighlightForegroundColor="{StaticResource FHUMaroon}"
                                 Text="{Binding Price}"
+                                ClickedCommand="{Binding Path=BindingContext.StoreButtonPress, Source={x:Reference StoreCollectionView}}"
+                                ClickedCommandParameter="{Binding .}"
                                 HorizontalOptions="Center"/>
 
 

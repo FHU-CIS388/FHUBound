@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using FHUBound.Models;
-
+using FHUBound.ViewModels;
 using Xamarin.Forms;
 
 namespace FHUBound.Views
@@ -14,13 +14,10 @@ namespace FHUBound.Views
         public StorePage()
         {
             InitializeComponent();
+            BindingContext = new StoreViewModel();
+            
 
-            StoreItems = new ObservableCollection<StoreItem>();
-            StoreItems.Add(new StoreItem() { ItemName = "T-Shirt", ImageUrl = "shirt1.png", Price = 500 });
-            StoreItems.Add(new StoreItem() { ItemName = "Hoodie", ImageUrl = "hoodie.jpg", Price = 1000 });
-            StoreItems.Add(new StoreItem() { ItemName = "Lion Plushie", ImageUrl = "lionPlush.jpg", Price = 1500 });
-
-            StoreCollectionView.ItemsSource = StoreItems;
+            
         }
     }
 }

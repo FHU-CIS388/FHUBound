@@ -57,6 +57,7 @@
                     HighlightBackgroundColor="{StaticResource LightWhite}"
                     HighlightBorderColor="{StaticResource Maroon}"
                     HighlightForegroundColor="{StaticResource Maroon}"
+                    
 
                     CornerRadius="16"
                     FontFamily="{StaticResource BoldFont}"
