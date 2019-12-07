@@ -121,11 +121,11 @@
                     
                     <Button Text="Redeem BB!"
                             TextColor="{StaticResource FHUMaroon}"
-                            BorderColor="{StaticResource FHUMaroon}"
+                            
                             BorderWidth="3"
                             CornerRadius="20"
                             WidthRequest="250"
-                            BackgroundColor="{StaticResource White}"                            
+                            BackgroundColor="{StaticResource FHUMaroon}"                            
                             HorizontalOptions="CenterAndExpand"
                             VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
