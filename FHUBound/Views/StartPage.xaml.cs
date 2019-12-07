@@ -19,7 +19,7 @@ namespace FHUBound.Views
         public async void OnButtonClicked(object sender, EventArgs args)
         {
             var newPage = new AddressPage();
-            await Navigation.PushAsync(newPage);
+            App.Current.MainPage = newPage;
         }
     }
 }
