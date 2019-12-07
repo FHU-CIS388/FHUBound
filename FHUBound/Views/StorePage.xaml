@@ -9,6 +9,20 @@
     Title="Store">
     <ContentPage.Content >
         <StackLayout Spacing="10" x:Name="StoreStackLayout">
+            <StackLayout 
+                    
+                    
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    BackgroundColor="{StaticResource FHUMaroon}"
+                    Padding="10,5,10,5">
+                <Label
+                        Text="Store"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource LargeText}"
+                        TextColor="White"/>
+            </StackLayout>
             <CollectionView x:Name="StoreCollectionView"
                             Grid.Row="0"
                             Margin="{OnPlatform Android='0', iOS='0,0,0,80'}"

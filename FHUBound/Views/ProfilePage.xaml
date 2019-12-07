@@ -4,8 +4,94 @@
              xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
              xmlns:models="clr-namespace:FHUBound.Models"
              xmlns:local="clr-namespace:FHUBound"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="FHUBound.Views.ProfilePage">
     <ContentPage.Content>
-        <Label Text="{Binding User.Username}"/>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <StackLayout 
+                    Grid.Row="0"
+                    
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    BackgroundColor="{StaticResource FHUMaroon}"
+                    Padding="10,5,10,5">
+                    <Label
+                        Text="Profile"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource LargeText}"
+                        TextColor="White"/>
+                </StackLayout>
+                <controls:CircleImage
+                    Source="profilePic.jpg"
+                    Aspect="AspectFill"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BorderColor="Black"
+                    Grid.Row="1"
+                    
+                    WidthRequest="200"
+                    Margin="15"/>
+                <Label
+                    Grid.Row="2"
+                    
+                    Text="{Binding User.Username}"
+                    Style="{StaticResource MediumText}"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Grid.Row="3"
+                    
+                    Text="{Binding User.Fullname}"
+                    Style="{StaticResource MediumText}"
+                    TextColor="Black"
+                    HorizontalOptions="StartAndExpand"/>
+                
+                <Label
+                    Grid.Row="4"
+                    
+                    Text="{Binding User.Email}"
+                    Style="{StaticResource MediumText}"
+                    TextColor="Black"
+                    HorizontalOptions="StartAndExpand"/>
+                <Label
+                    Grid.Row="5"
+                    
+                    Text="{Binding User.Address}"
+                    Style="{StaticResource MediumText}"
+                    TextColor="Black"
+                    HorizontalOptions="StartAndExpand"/>
+                <flex:FlexButton
+                    Grid.Row="6"
+                    Margin="0,0,0,20"
+                    Padding="0"        
+                    WidthRequest="150"    
+                    HeightRequest="50"
+                    BackgroundColor="{StaticResource FHUMaroon}"      
+                    BorderColor="{StaticResource LightWhite}"   
+                    BorderThickness="1"      
+                    CornerRadius="25"    
+                    FontFamily="{StaticResource BoldFont}"   
+                    FontSize="20"      
+                    ForegroundColor="{StaticResource LightWhite}"      
+                    HighlightBackgroundColor="{StaticResource LightWhite}"      
+                    HighlightBorderColor="{StaticResource FHUMaroon}"     
+                    HighlightForegroundColor="{StaticResource FHUMaroon}"   
+                    Text="Edit"
+                    Clicked="EditButton"
+                    HorizontalOptions="Center"/>
+                
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -18,8 +18,11 @@ namespace FHUBound
             DependencyService.Register<MockDataStore>();
 
             App.CurrentUser = new User();
+
             
-            
+
+
+
         }
 
         protected override void OnStart()
