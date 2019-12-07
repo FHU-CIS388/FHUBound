@@ -26,15 +26,35 @@ namespace FHUBound.ViewModels
             StoreItems.Add(new StoreItem() { ItemName = "Hoodie", ImageUrl = "hoodie.jpg", Price = 1000 });
             StoreItems.Add(new StoreItem() { ItemName = "Lion Plushie", ImageUrl = "lionPlush.jpg", Price = 1500 });
         }
+
+        public void NotEnough()
+        {
+            Application.Current.MainPage.DisplayAlert("Alert", "You do not have enough points", "OK");
+        }
+        public void Purchased()
+        {
+            Application.Current.MainPage.DisplayAlert("Item Purchased", "", "OK");
+        }
         public ICommand StoreButtonPress
         {
+            
             get
             {
                 return new Command((s) =>
                 {
+                    
                     var sItem = s as StoreItem;
                     int? points = sItem.Price as int?;
-                    User.TotalPoints -= points.Value;
+                    if (User.TotalPoints < points.Value)
+                    {
+                        NotEnough();
+                    }
+                    else
+                    {
+                        User.TotalPoints -= points.Value;
+                        Purchased();
+                    }
+                    
                 }
                 );
             }

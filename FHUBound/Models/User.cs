@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace FHUBound.Models
 {
-    public class User: BaseViewModel, INotifyPropertyChanged
+    public class User: BaseViewModel
     {
         
         public string Id { get; set; }
