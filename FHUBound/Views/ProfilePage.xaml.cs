@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using FHUBound.ViewModels;
 
 namespace FHUBound.Views
 {
@@ -10,6 +11,8 @@ namespace FHUBound.Views
         public ProfilePage()
         {
             InitializeComponent();
+
+            BindingContext = new ProfileViewModel();
         }
     }
 }

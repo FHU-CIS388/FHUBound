@@ -21,9 +21,6 @@
     <None Remove=".DS_Store" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Views\AddressPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\StartPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
