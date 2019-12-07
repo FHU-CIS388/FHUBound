@@ -56,8 +56,8 @@ namespace FHUBound.ViewModels
         {
             
             CookieGame.Clicks += 1;
-            await ImageButton.ScaleTo(1.05, 100, Easing.BounceIn);
-            await ImageButton.ScaleTo(1, 100, Easing.BounceOut);
+            await ImageButton.ScaleTo(1.05, 75, Easing.BounceIn);
+            await ImageButton.ScaleTo(1, 75, Easing.BounceOut);
 
             if (CookieGame.Clicks % 25 == 0)
             {

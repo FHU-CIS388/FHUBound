@@ -57,13 +57,13 @@ namespace FHUBound.Models
         {
             int[] levels = new int[7] { 100, 200, 300, 400, 500, 600, 700 };
 
-            if (App.CurrentUser.points == 0 || App.CurrentUser.points < 100)
+            if (App.CurrentUser.TotalPoints == 0 || App.CurrentUser.TotalPoints < 100)
             {
                 App.CurrentUser.level = 0;
             }
             else
             {
-                App.CurrentUser.Level = App.CurrentUser.points / 100;
+                App.CurrentUser.Level = App.CurrentUser.TotalPoints / 100;
             }
            
         }
