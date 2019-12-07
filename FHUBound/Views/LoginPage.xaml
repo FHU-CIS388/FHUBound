@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="FHUBound.Views.LoginPage">   
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="10"
+                     Padding="15"
+                     Spacing="10">
             <Label Text="Welcome to FHU Bound!"
                    TextColor="{StaticResource FHUMaroon}"
                    Style="{StaticResource HeaderTitle}"

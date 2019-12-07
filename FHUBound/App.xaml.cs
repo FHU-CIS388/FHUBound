@@ -15,9 +15,7 @@ namespace FHUBound
         public App()
         {
             InitializeComponent();
-            userDataStore = new UserDataStore();
-            string temp = "blank";
-            Preferences.Set("current_user_id", temp);
+            userDataStore = new UserDataStore();            
             if (IsLoggedIn())
             {
                 MainPage = new AppShell();

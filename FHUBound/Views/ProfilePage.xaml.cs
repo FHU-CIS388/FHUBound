@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FHUBound.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace FHUBound.Views
 {
@@ -14,6 +15,11 @@ namespace FHUBound.Views
             InitializeComponent();
             viewModel = new ProfileViewModel();
             BindingContext = viewModel;
+        }
+
+        private void btnLogOut_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Remove("current_user_id");
         }
     }
 }

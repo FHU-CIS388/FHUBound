@@ -16,7 +16,7 @@ namespace FHUBound.Services
             {
                 new User { Id = "1", Name = "John Hopkins", Password = "pirate01"},
                 new User { Id = "2", Name = "Amy Dashford", Password = "jonaslover14"},
-                new User { Id = "3", Name = "Nemo", ImagePath = "profile.jpg", AdvRegistered = true, MGRegistered = true      }
+                new User { Id = "3", Name = "Nemo", ImagePath = "profile.jpg", ADVRegistered = true, MGRegistered = true      }
             };
         }
         public async Task<bool> AddItemAsync(User _user)

@@ -6,10 +6,18 @@
              x:Class="FHUBound.Views.ProfilePage">
     
     <ContentPage.Content>
-        <pancake:PancakeView>
+        <ScrollView>
             <StackLayout Margin="10">
+                <Button x:Name="btnLogOut"
+                            VerticalOptions="Start"
+                            HorizontalOptions="End"
+                            BackgroundColor="Transparent"
+                            Text="Log Out"
+                            TextColor="{StaticResource FHUMaroon}"
+                            Style="{StaticResource SmallText}"
+                            Clicked="btnLogOut_Clicked"/>
                 <StackLayout Padding="100, 50, 100, 25">
-
+                    
                     <Frame CornerRadius="100"
                            Padding="0"
                            IsClippedToBounds="True"
@@ -40,7 +48,10 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Text="Maroon &amp; Gold Day:"
                            Grid.Row="0"
@@ -66,7 +77,7 @@
                            Style="{StaticResource MediumText}"
                            Margin="5"/>
 
-                    <Label Text="Not Registered"
+                    <Label Text="{Binding CurrentUser.CTStatus}"
                            Grid.Row="1"
                            Grid.Column="1"
                            HorizontalOptions="End"
@@ -82,7 +93,7 @@
                            Style="{StaticResource MediumText}"
                            Margin="5"/>
 
-                    <Label Text="Not Registered"
+                    <Label Text="{Binding CurrentUser.IFStatus}"
                            Grid.Row="2"
                            Grid.Column="1"
                            HorizontalOptions="End"
@@ -98,7 +109,7 @@
                            Style="{StaticResource MediumText}"
                            Margin="5"/>
 
-                    <Label Text="Not Registered"
+                    <Label Text="{Binding CurrentUser.ClassStatus}"
                            Grid.Row="3"
                            Grid.Column="1"
                            HorizontalOptions="End"
@@ -131,7 +142,7 @@
                 </StackLayout>
                 
             </StackLayout>            
-        </pancake:PancakeView>
+        </ScrollView>
         
     </ContentPage.Content>
 </ContentPage>
