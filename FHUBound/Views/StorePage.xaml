@@ -8,82 +8,98 @@
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
-                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <BoxView
-                    BackgroundColor="#DCDCDC"
+                    BackgroundColor="#33343c"
                     Grid.RowSpan="7">
                     
                 </BoxView>
-                
-                <StackLayout Grid.Row="0">
-                    <Image Source="icons8_jacket_100.png"
-                           HeightRequest="100"
-                           ></Image>
-                        <Button
-                       x:Name="jacketButton"
-                       Clicked="testButton_Clicked"
-                        Text="1000 pts"
-                            TextColor="White"
-                            BackgroundColor="#808080"
-                        ></Button>
-                </StackLayout>
-                <StackLayout Grid.Row="1">
-                    <Image Source="icons8_t_shirt_100.png"
-                           HeightRequest="100"
-                           ></Image>
-                    <Button
-                       x:Name="shirtButton"
-                       Clicked="shirtButton_Clicked"
-                        Text="850 pts"
-                         TextColor="White"
-                            BackgroundColor="#808080"
-                        ></Button>
-                </StackLayout>
-                <StackLayout Grid.Row="2">
-                    <Image Source="icons8_cap_64.png"
-                           HeightRequest="100"
-                           ></Image>
-                    <Button
-                       x:Name="capButton"
-                       Clicked="capButton_Clicked"
-                        Text="500 pts"
-                        TextColor="White"
-                            BackgroundColor="#808080"
-                     
+
+                <StackLayout>
+                <CollectionView
+                    x:Name="storeCollectionView"
+                    ItemsSource="{Binding Items}"
+                    HorizontalOptions="Center"
+                    Grid.ColumnSpan="2"
+                    >
+                    <CollectionView.ItemTemplate >
+
+                        <DataTemplate >
+                                <StackLayout
+                                    
+                                    >
+                              <StackLayout Orientation="Horizontal" 
+                                           HorizontalOptions="Center"
+                                           Margin="-30,30,0,0"
+                                           >
+                                    <Image Source="{Binding ImageUrl}"
+                                           HeightRequest="100"
+                                           WidthRequest="100"
+                                           Margin="30,0,0,0"
+                                           ></Image>
+
+                                    <StackLayout Spacing="0" Margin="40,20,0,0" >
+                                        <Label
+                                            x:Name="nameLabel"
+                                            Text="{Binding Name}"
+                                            FontSize="25"
+                                            TextColor="White"
+                                            HorizontalOptions="Center"
+                                            ></Label>
+                                 
+                                    <Button Text="{Binding Cost, StringFormat='{0} points '}"
+                                            x:Name="buyButton"
+                                            Clicked="buyButton_Clicked"
+                                            TextColor="White"
+                                            BackgroundColor="Tan"
+                                            WidthRequest="70"
+                                            
+                                            ></Button>
+                                
+                                    </StackLayout>
+
+                                    
+                              </StackLayout>
+                                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Black"/>
+
+                                </StackLayout>
+
+
+
+
+                            </DataTemplate>
                         
-                        ></Button>
+                        
+                        
+                        
+                        
+                        
+                    </CollectionView.ItemTemplate>
+                  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </CollectionView>
+
                 </StackLayout>
-                <StackLayout Grid.Row="3">
-                    <Image Source="icons8_book_200.png"
-                           HeightRequest="100"
-                           ></Image>
-                    <Button
-                       x:Name="bookButton"
-                       Clicked="bookButton_Clicked"
-                        Text="50 pts"
-                        TextColor="White"
-                            BackgroundColor="#808080"
-                        ></Button>
-                </StackLayout>
-                <StackLayout Grid.Row="4">
-                    <Image Source="icons8_gift_64.png"
-                           HeightRequest="100"
-                           ></Image>
-                    <Button
-                       x:Name="giftButton"
-                       Clicked="giftButton_Clicked"
-                        Text="5000 pts"
-                        TextColor="White"
-                            BackgroundColor="#808080"
-                        ></Button>
-                </StackLayout>
+
+
+
+
+
+
+
 
 
 

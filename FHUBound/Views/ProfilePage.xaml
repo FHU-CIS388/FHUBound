@@ -21,13 +21,13 @@
                 
                 
                 <BoxView
-                    Grid.Row="0"
+                    Grid.RowSpan="9"
                   
                     HorizontalOptions="Fill"
                     VerticalOptions="Fill"
                     WidthRequest="300"
                     HeightRequest="200"
-                    Color="black"
+                    Color="#33343c"
                     ></BoxView>
                 
                 
@@ -37,14 +37,16 @@
                     
              
 
-                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
 
                     <controls:CircleImage 
                         Source="Jack_Headshot_Square.jpg" 
-                        WidthRequest="120" 
-                        HeightRequest="240" 
+                        WidthRequest="300" 
+                         
+                        Margin="20"
                         Grid.Row="0" 
-                        Scale="2.25"
+                        Scale="1"
+                        Aspect="AspectFill"
                         HorizontalOptions="Center" 
                         VerticalOptions="Center"
                         
@@ -55,20 +57,14 @@
 
 
 
-                <BoxView
-                    Grid.Row="1"
-                    WidthRequest ="60"
-                    HeightRequest="60"
-                
-                    BackgroundColor="Black"
-                   >
+               
 
-                </BoxView>
+              
                 <BoxView
                     Grid.Row="1"
                     HeightRequest="60"
                     WidthRequest="260"
-                    BackgroundColor="Maroon"
+                    BackgroundColor="tan"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     CornerRadius="10"
@@ -84,6 +80,7 @@
                     Grid.Row="1"
                     TextColor="White"
                     HorizontalOptions="Center"
+                    Margin="10"
                     FontSize="40"
           
                     >
@@ -91,15 +88,6 @@
 
                 </Label>
 
-                <BoxView
-                    Grid.Row="2"
-                    BackgroundColor="black"
-                    WidthRequest="400"
-                    HeightRequest="50"
-                    
-                    >
-
-                </BoxView>
 
                 <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" >
 
@@ -109,6 +97,7 @@
                         TextColor="White"
                         HorizontalOptions="Center"
                         Text="Points: "
+                        Margin="10"
                         ></Label>
                     
                     <Label
@@ -117,7 +106,7 @@
                     TextColor="White"
                     HorizontalOptions="Center"
                     Grid.Row="2" 
-                   
+                   Margin="10"
                     
                     
                   ></Label>
@@ -126,15 +115,6 @@
                 </StackLayout>
                
 
-                <BoxView
-                    Grid.Row="3"
-                    BackgroundColor="black"
-                    WidthRequest="400"
-                    HeightRequest="50"
-                    
-                    >
-
-                </BoxView>
 
 
                 <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" >
@@ -145,6 +125,7 @@
                         TextColor="White"
                         HorizontalOptions="Center"
                         Text="TotalPoints: "
+                        Margin="10"
                         ></Label>
 
                     <Label
@@ -153,7 +134,7 @@
                     TextColor="White"
                     HorizontalOptions="Center"
                     Grid.Row="3" 
-                   
+                   Margin="10"
                     
                     
                   ></Label>
@@ -162,15 +143,7 @@
                 </StackLayout>
 
 
-                <BoxView
-                    Grid.Row="4"
-                    BackgroundColor="black"
-                    WidthRequest="400"
-                    HeightRequest="50"
-                    
-                    >
-
-                </BoxView>
+              
 
                 <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" >
 
@@ -180,12 +153,14 @@
                         TextColor="White"
                         HorizontalOptions="Center"
                         Text="level: "
+                        Margin="10"
                         ></Label>
 
                     <Label
                     Text= "{Binding User.Level}"
                     FontSize="30"
                     TextColor="White"
+                        Margin="10"
                     HorizontalOptions="Center"
                     Grid.Row="4" 
                    
@@ -200,15 +175,6 @@
 
 
 
-                <Button
-                    Grid.Row="5"
-                    Text="Edit"
-                    WidthRequest="20"
-                    x:Name="editButton"
-                    Clicked="editButton_Clicked"
-                    
-                    
-                    ></Button>
                
                 
                 

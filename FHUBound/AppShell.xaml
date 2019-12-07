@@ -39,7 +39,7 @@
             <ShellContent ContentTemplate="{DataTemplate views:StorePage}" />
         </Tab>
 
-        <Tab Title="Cookie" Icon="icons8_chat_filled.png">
+        <Tab Title="Cookie" Icon="icons8_cookie_50.png">
             <ShellContent ContentTemplate="{DataTemplate views:CookieClickerPage}" />
         </Tab>
 

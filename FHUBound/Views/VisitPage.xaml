@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FHUBound.Views.VisitPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FHUBound.Views.VisitPage">
     <ContentPage.Content>
 
 
@@ -23,18 +24,56 @@
             
         </Button>
 
-            <Entry Text="change Username"
+
+
+            <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="Center">
+
+                <Label Text="Change Username: "
+                       VerticalOptions="Center"
+                       ></Label>
+                <Entry Text="{Binding User.Username}"
+                       WidthRequest="100"
+                       HorizontalTextAlignment="Center"
                    x:Name="changeUsernameEntry"
                    Grid.Row="1"
                    >
-                
-            </Entry>
+
+                </Entry>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="3" HorizontalOptions="Center" WidthRequest="225">
+
+                <Label Text="Set Points "
+                       VerticalOptions="Center"
+                       ></Label>
+                <Entry Text="0"
+                       HorizontalTextAlignment="Center"
+                       WidthRequest="100"
+                       TranslationX="47"
+                   x:Name="addPointsEntry"
+                      
+                   Grid.Row="1"
+                   >
+
+                </Entry>
+            </StackLayout>
+
+           
+
+
+
             <Button
                 Text="save"
-                Grid.Row="2"
+                Grid.Row="5"
                 x:Name="saveChangeButton"
                 Clicked="saveChangeButton_Clicked"
                 ></Button>
+           
+
+          
+
+
+           
 
 
 

@@ -1,33 +1,33 @@
-﻿using System;
+﻿using FHUBound.Models;
+using FHUBound.Services;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using FHUBound.Models;
-using FHUBound.Views;
 
 namespace FHUBound.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
-    {
-        
-        public ObservableCollection<Item> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
-        /*
-        public ItemsViewModel()
-        {
-            Title = "Browse";
-            Items = new ObservableCollection<Item>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+    class StoreViewModel : BaseViewModel
 
-            MessagingCenter.Subscribe<NewItemPage, StoreItem>(this, "AddItem", async (obj, item) =>
-            {
-                var newItem = item as StoreItem;
-                Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
-            });
+
+
+    {
+
+        public ObservableCollection<StoreItem> Items { get; set; }
+        public Command LoadItemsCommand { get; set; }
+
+        public StoreDataStore DataStore = new StoreDataStore();
+        public bool IsBusy { get; private set; }
+
+        public StoreViewModel()
+        {
+            Title = "Store";
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            Items = new ObservableCollection<StoreItem>();
+
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -40,8 +40,8 @@ namespace FHUBound.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
+                var storeitems = await DataStore.GetItemsAsync(true);
+                foreach (var item in storeitems)
                 {
                     Items.Add(item);
                 }
@@ -54,6 +54,11 @@ namespace FHUBound.ViewModels
             {
                 IsBusy = false;
             }
-        }*/
+        }
+
+
+
+
+
     }
 }
