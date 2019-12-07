@@ -19,6 +19,7 @@ namespace FHUBound
 
             App.CurrentUser = new User();
             
+            
         }
 
         protected override void OnStart()

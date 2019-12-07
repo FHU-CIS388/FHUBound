@@ -42,7 +42,7 @@
                     Grid.Column="0"
                     Padding="0"
                     Style="{StaticResource LargeText}"
-                    Text="Good morning, Savannah" />
+                    Text="{Binding User.Firstname, StringFormat='Good Morning, {0:0}'}" />
 
                 <flex:FlexButton
                     Grid.Row="0"
@@ -63,7 +63,7 @@
                     FontSize="25"
                     ForegroundColor="{StaticResource LightWhite}"
 
-                    Text="325 🦁"
+                    Text="{Binding User.TotalPoints, StringFormat='{0:0} 🦁'}"
                     VerticalOptions="Start"/>
             </Grid>
 
@@ -72,6 +72,7 @@
                 x:Name="CardsCollectionView"
                 Grid.Row="0"
                 Margin="{OnPlatform Android='0', iOS='0,0,0,80'}"
+                ItemsSource="{Binding Cards}"
                 >
                 <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type models:Card}">
@@ -218,10 +219,11 @@
                                             FontFamily="{StaticResource BlackFont}"
                                             BackgroundColor="Transparent"
                                             ForegroundColor="{StaticResource LightWhite}"
-                                            
+                                            ClickedCommand="{Binding Path=BindingContext.AddPoints, Source={x:Reference CardsCollectionView}}"
                                             HighlightBackgroundColor="Transparent" 
                                             HighlightForegroundColor="{StaticResource Maroon}"
-                                            
+                                            IsVisible="{Binding PointsNotCollected}"
+                                            ClickedCommandParameter="{Binding .}"
                                             
 
                                             Text="{Binding Value, StringFormat='Collect {0:0} 🦁'}"

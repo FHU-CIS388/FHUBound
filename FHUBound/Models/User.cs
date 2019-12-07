@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FHUBound.ViewModels;
 
 namespace FHUBound.Models
 {
-    public class User
+    public class User: BaseViewModel
     {
         public string Id { get; set; }
         public string Firstname { get; set; }
@@ -12,10 +13,15 @@ namespace FHUBound.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-
+        
         public string Address { get; set; }
 
-        public int Points { get; set; }
+        
+        private int totalPoints = 0;
+        public int TotalPoints {
+            get { return totalPoints; }
+            set { SetProperty(ref totalPoints, value); }
+        }
 
         public DateTime Birthday { get; set; }
 

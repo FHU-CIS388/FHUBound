@@ -1,12 +1,14 @@
 ﻿using System;
+using FHUBound.ViewModels;
 namespace FHUBound.Models
 {
-    public class Card
+    public class Card: BaseViewModel
     {
         public string HeaderTitle { get; set; } = "";
         public string HeaderSubtitle { get; set; } = "";
         public string HeaderBackgroundColor { get; set; } = "";
         public string HeaderForegroundColor { get; set; } = "";
+        
 
         public string ImageUrl { get; set; } = "";
         public string VideoUrl { get; set; } = "";
@@ -21,6 +23,12 @@ namespace FHUBound.Models
         public string ButtonText { get; set; } = "";
         public string ButtonBackgroundColor { get; set; } = "";
         public string ButtonForegroundColor { get; set; } = "";
+
+        private bool pointsNotCollected = true;
+        public bool PointsNotCollected {
+            get { return pointsNotCollected; }
+            set { SetProperty(ref pointsNotCollected, value); } 
+        } 
 
         public DateTime StartDateTime { get; set; } 
         public DateTime EndDateTime { get; set; }
