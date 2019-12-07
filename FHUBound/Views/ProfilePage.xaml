@@ -120,7 +120,7 @@
                            Margin="10"/>
                     
                     <Button Text="Redeem BB!"
-                            TextColor="{StaticResource FHUMaroon}"
+                            TextColor="{StaticResource White}"
                             
                             BorderWidth="3"
                             CornerRadius="20"
