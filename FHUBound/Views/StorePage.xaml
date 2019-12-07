@@ -59,7 +59,7 @@
                                             Clicked="buyButton_Clicked"
                                             TextColor="White"
                                             BackgroundColor="Tan"
-                                            WidthRequest="70"
+                                            WidthRequest="110"
                                             
                                             ></Button>
                                 

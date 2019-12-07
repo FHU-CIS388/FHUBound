@@ -16,7 +16,7 @@ namespace FHUBound.Services
             items = new List<StoreItem>()
             {
                 new StoreItem {ImageUrl = "jacket.png", Name = "Jacket", Cost = 1000, ClickEvent = "jacket_click" },
-                new StoreItem {ImageUrl = "shirt.png", Name ="Shirt", Cost = 850, ClickEvent = "shirt_click"}, 
+                new StoreItem {ImageUrl = "better_shirt.png", Name ="Shirt", Cost = 850, ClickEvent = "shirt_click"}, 
                 new StoreItem {ImageUrl = "cap.png",Name="Cap" ,Cost=500, ClickEvent = "cap_click"},
                 new StoreItem {ImageUrl = "book.png", Name= "FHU book", Cost = 50 , ClickEvent = "book_click"},
                 new StoreItem {ImageUrl = "gift.png", Name="Mystery Gift", Cost= 5000 , ClickEvent = "gift_click"},
